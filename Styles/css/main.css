@@ -1,32 +1,32 @@
 @charset "UTF-8";
 @import "..//node_modules/bootstrap-icons/font/bootstrap-icons.css";
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
-.content_Text {
+.content-text {
   font-family: "Libre Franklin", serif;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.small_Text {
+.small-text {
   font-family: "signika", serif;
   font-size: 0.9rem;
   font-weight: 200;
 }
 
 @media (max-width: 426px) {
-  .content_Text {
+  .content-text {
     font-size: 15px;
     font-weight: 500;
   }
-  .small_Text {
+  .small-text {
     font-size: 10px;
     font-weight: 100;
   }
-  .footer_Mobile {
+  .footer-mobile {
     padding-left: 30px;
   }
 }
-.text_Shadow {
+.text-shadow {
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
@@ -12004,7 +12004,6 @@ textarea.form-control-lg {
   line-height: 1;
   display: inline-block;
 }
-
 .nav-link::after {
   content: "";
   position: absolute;
@@ -12016,17 +12015,16 @@ textarea.form-control-lg {
   background-color: #7B5E2F;
   transition: width 0.3s ease-in-out; /* ajout de la transition */
 }
-
 .nav-link:hover::after {
   width: 100%; /* étendre la ligne */
 }
 
-.img_Logo {
+.img-logo {
   width: 50px;
 }
 
 @media (max-width: 576px) {
-  .img_Logo {
+  .img-logo {
     width: 40px;
   }
 }
@@ -12067,7 +12065,7 @@ footer p {
   margin-bottom: 0.5rem;
 }
 
-.icon_Footer {
+.icon-footer {
   fill: #7B5E2F;
   padding: 0px 2px 2px 0px;
 }
