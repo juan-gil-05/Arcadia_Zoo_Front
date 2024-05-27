@@ -11,6 +11,13 @@ $dark : #001D00;
 $font-family-sans-serif : "Asap", sans-serif !default; // headline et subtitle text
 $font-family-serif : "Libre Franklin", serif; // content Text
 
+//Modification du text des titres
+.title-text { 
+    font-family: $font-family-sans-serif;
+    font-size: 3rem !important;
+    font-weight: 800;
+}
+
 //Modification du text du contenu
 .content-text { 
     font-family: $font-family-serif;
@@ -23,22 +30,35 @@ $font-family-serif : "Libre Franklin", serif; // content Text
     font-size: 0.9rem;
     font-weight: 200;
 } 
-//Media queries 
+//Media queries pour le mobile
 @media (max-width: "426px"){
+    // pour le text du titre
+    .title-text{
+        font-size: 1.5rem !important;
+        font-weight: 600;
+    }
     //pour le text du contenu 
     .content-text{
-        font-size: 15px;
+        font-size: 0.93rem;
         font-weight: 500;
     } 
     //le text petit
     .small-text{
-        font-size: 10px;
+        font-size: 0.62rem;
         font-weight: 100;
     }
     //pour le footer en mobile
     .footer-mobile{
         padding-left: 30px;
     }
+}
+//Media Queries pour 
+//Media Queries pour une laptop L
+@media (min-width : "1440px"){ // Pour laptop L
+    .content-text{
+        font-size: 2rem;
+    }
+    $fs-1 : 7rem;
 }
 
 .text-shadow {text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);} // ombre du text
@@ -49,6 +69,17 @@ $font-family-serif : "Libre Franklin", serif; // content Text
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 //----------------------------------------------------------------------------------------
+
+//j'ai fait ca pour que l'image du principal contenu sois visible
+.header{
+    position: relative;
+    z-index: 1;
+}
+// Mettre le navbar devant
+.navbar{
+    position: absolute;
+    width: 100%;
+}
 
 // Ajout une petite animation aux liens du navbar 
 .nav-link {
@@ -66,7 +97,7 @@ $font-family-serif : "Libre Franklin", serif; // content Text
         height: 3px; /* l'épaisseur de la ligne */
         bottom: 0;
         left: 0;
-        background-color: $info;
+        background-color: white;
         transition: width 0.3s ease-in-out; /* ajout de la transition */
     }
     &:hover::after{
@@ -101,9 +132,9 @@ footer.footer{
     padding: 15px 12px 5px;
 }
 //pour que le main ne sois pas cache pour le footer 
-main{
-    margin-bottom: 264px;
-}
+// main{
+//     margin-bottom: 264px;
+// }
 // Ajout d'une ligne sur le text du copyright
 .ligne{
     position: relative;
@@ -133,3 +164,42 @@ footer p.ligne{
     padding-right: 15px;
     margin-bottom: 0px;
 }
+
+//------------------------------------------------------------------------
+
+.big-titre{
+    // Taille du conteneur qui aura l'image
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 550px;
+    // Media queries pour ajuster l'hauteur de l'image et le text
+    @media (max-width : "1024px"){ // pour laptop, et tablet
+        height: 380px;
+    }
+    @media (max-width : "426px"){ // Pour mobile
+        height: 200px;
+        .big-titre-content h2{
+            font-size: 0.85rem;
+        }
+    }
+    //Ajout de l'image
+    &::before{
+        position: absolute;
+        content: "";
+        background-image: url(../../Assets/image_Bienvenue.jpg); // je l'ai fait comme ca, car le main.css est dans un autre dossier (css)
+        background-position: center;
+        background-size: cover;
+        height: 100%; 
+        width: 100%;
+        filter: opacity(0.7);
+    }
+    //modification du text sur l'image
+    .big-titre-content h2{
+            position: absolute;
+            top: 40%;
+            width: 45%;
+            margin-left: 15px;
+    }
+}
+
