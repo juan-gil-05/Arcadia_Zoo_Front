@@ -30,6 +30,11 @@ $font-family-serif : "Libre Franklin", serif; // content Text
     font-size: 0.9rem;
     font-weight: 200;
 } 
+
+.text-justify{
+    text-align: justify;
+}
+
 //Media queries pour le mobile
 @media (max-width: "426px"){
     // pour le text du titre
@@ -59,6 +64,9 @@ $font-family-serif : "Libre Franklin", serif; // content Text
         font-size: 2rem;
     }
     $fs-1 : 7rem;
+    .small-text{
+        font-size: 1.1rem;
+    }
 }
 
 .text-shadow {text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);} // ombre du text
@@ -132,9 +140,9 @@ footer.footer{
     padding: 15px 12px 5px;
 }
 //pour que le main ne sois pas cache pour le footer 
-// main{
-//     margin-bottom: 264px;
-// }
+main{
+    margin-bottom: 264px;
+}
 // Ajout d'une ligne sur le text du copyright
 .ligne{
     position: relative;
@@ -192,7 +200,7 @@ footer p.ligne{
         background-size: cover;
         height: 100%; 
         width: 100%;
-        filter: opacity(0.7);
+        filter: opacity(0.7)  drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
     }
     //modification du text sur l'image
     .big-titre-content h2{
@@ -203,3 +211,10 @@ footer p.ligne{
     }
 }
 
+//------------------------------------------------------------------------------------------------
+
+
+section.container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
