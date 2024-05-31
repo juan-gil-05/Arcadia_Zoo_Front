@@ -1,8 +1,3 @@
-//customization de la taille du font
-$fs-1 : 5rem; //headline text
-$fs-2 : 4.68rem; // subtitle text
-$fs-3 : 1.5rem; // content text
-$fs-4 : 0.9rem; // small text
 // customisation des couleurs et les fonts
 $primary : #1A440C;
 $secondary : #709255;
@@ -10,14 +5,23 @@ $info : #7B5E2F;
 $dark : #001D00;
 $font-family-sans-serif : "Asap", sans-serif !default; // headline et subtitle text
 $font-family-serif : "Libre Franklin", serif; // content Text
+$btn-font-family: $font-family-serif; // font des boutons
+$btn-font-weight: 600; // épaisseur du text des boutons 
 
 //Modification du text des titres
 .title-text { 
     font-family: $font-family-sans-serif;
     font-size: 3rem !important;
     font-weight: 800;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
-
+//Modification du text des sous-titres
+.subtitle-text{
+    font-family: $font-family-sans-serif;
+    font-size: 1.9rem;
+    font-weight: 600;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
 //Modification du text du contenu
 .content-text { 
     font-family: $font-family-serif;
@@ -47,6 +51,10 @@ $font-family-serif : "Libre Franklin", serif; // content Text
         font-size: 0.93rem;
         font-weight: 500;
     } 
+    // les sous-titres
+    .subtitle-text{
+        font-size: 1.3rem;
+    }
     //le text petit
     .small-text{
         font-size: 0.62rem;
@@ -57,13 +65,17 @@ $font-family-serif : "Libre Franklin", serif; // content Text
         padding-left: 30px;
     }
 }
-//Media Queries pour 
+//Media Queries pour tablet
+
 //Media Queries pour une laptop L
-@media (min-width : "1440px"){ // Pour laptop L
+@media (min-width : "1440px"){ // 
     .content-text{
         font-size: 2rem;
     }
-    $fs-1 : 7rem;
+    // les sous-titres
+    .subtitle-text{
+        font-size: 2.5rem;
+    }
     .small-text{
         font-size: 1.1rem;
     }
@@ -174,6 +186,7 @@ footer p.ligne{
 }
 
 //------------------------------------------------------------------------
+//SECTION DU BIG TITLE SUR LA PAGE D'ACCUEIL
 
 .big-titre{
     // Taille du conteneur qui aura l'image
@@ -196,11 +209,12 @@ footer p.ligne{
         position: absolute;
         content: "";
         background-image: url(../../Assets/image_Bienvenue.jpg); // je l'ai fait comme ca, car le main.css est dans un autre dossier (css)
-        background-position: center;
+        background-position: left;
         background-size: cover;
         height: 100%; 
         width: 100%;
-        filter: opacity(0.7)  drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+        filter: opacity(0.7)  drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+        background-attachment: fixed; //Pour créer l'effet parallax
     }
     //modification du text sur l'image
     .big-titre-content h2{
@@ -212,9 +226,49 @@ footer p.ligne{
 }
 
 //------------------------------------------------------------------------------------------------
+//SECTION DES HABITATS SUR LA PAGE D'ACCUEIL
 
-
-section.container{
-    margin-top: 30px;
-    margin-bottom: 30px;
+section{
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2); // je met une petite ombre dans toutes les section
 }
+
+.container-img-habitats{
+    //hauteur du conteneur qui a les images
+    height: 600px;
+    //Media queries du conteneur qui a les images
+    @media (max-width : "1024px"){ //laptop
+        height: 400px;
+    }
+    @media (max-width : "768px"){ //tablet
+        height: 300px;
+    }
+    @media (max-width : "426px"){ //mobile
+        height: 150px;
+    }
+    // en position relative pour que le titre du habitat sois dans l'image
+    .col{
+        position: relative;
+        transition: 0.6s;
+        cursor: pointer;
+        //animation pour zoomer l'image
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+    // Les images des habitats
+    .image-habitats{
+        width: 100%;
+        height: 100%;
+        border-radius: 5%;
+        object-fit: cover;
+        object-position: 78%;
+        filter: brightness(0.9) drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5)); //un peu obscur et avec un petit ombre            
+    } 
+    // Le titre de l'habitat sur l'image 
+    .habitat-title{
+        position: absolute;
+        bottom: 2%;
+        left: 12%;
+    }
+}
+
