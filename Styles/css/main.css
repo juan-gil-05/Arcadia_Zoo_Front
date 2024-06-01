@@ -12149,7 +12149,6 @@ footer p.ligne {
   height: 100%;
   width: 100%;
   filter: opacity(0.7) drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
-  background-attachment: fixed;
 }
 .big-titre .big-titre-content h2, .big-titre .big-titre-content .h2 {
   position: absolute;
@@ -12202,4 +12201,25 @@ section {
   position: absolute;
   bottom: 2%;
   left: 12%;
+}
+
+.card {
+  --bs-card-border-color: $primary;
+  --bs-card-bg: $primary;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.6s;
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card .card-img-top {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card .image-card {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=main.css.map */
