@@ -112,15 +112,16 @@
             <div class="col d-flex justify-content-center mt-3 mt-lg-0">
                 <div class="card" style="width: 18rem;">
                     <div class="image-card">
-                        <img src="../Assets/zoo-train.jpg" class="card-img-top" alt="Service de visite du zoo en petit train">
-                    </div>    
+                        <img src="../Assets/zoo-train.jpg" class="card-img-top"
+                            alt="Service de visite du zoo en petit train">
+                    </div>
                     <div class="card-body bg-secondary">
                         <h5 class="card-title content-text fs-4 text-white">Visite du zoo en train</h5>
                         <div class="d-flex justify-content-end">
                             <a href="#" class="btn btn-info">Lire plus</a>
                         </div>
                     </div>
-                </div>              
+                </div>
             </div>
         </div>
         <!--Le bouton-->
@@ -132,3 +133,64 @@
     </div>
 </section>
 <!-- Section des animaux -->
+<section class="bg-info">
+    <div class="container pt-4 pb-2">
+        <h2 class="text-white subtitle-text text-center">NOS ANIMAUX</h2> <!--Titre de la section-->
+    </div>   
+        <!--conteneur du carrousel des images-->
+    <div class="bg-black image-container"> 
+            <div  class="carousel slide h-100" id="carouselExampleAutoplaying" data-bs-ride="carousel"> <!--Pour que le carrousel soit automatique-->
+                <!--Carrousel avec les images de chaque espèce-->
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item h-100 active">
+                        <p class="animal-name subtitle-text">mammifères</p>
+                        <img src="../Assets/Img-animals-homePage/mammifères.jpg" class="d-block image-animal" alt="Image d'un lion">
+                    </div>
+                    <div class="carousel-item h-100">
+                        <p class="animal-name subtitle-text">Oiseaux</p>
+                        <img src="../Assets/Img-animals-homePage/oiseaux.jpg" class="d-block image-animal img-invert" alt="Image d'un perroquet">
+                    </div>
+                    <div class="carousel-item h-100">
+                        <p class="animal-name subtitle-text">Reptiles</p>
+                        <img src="../Assets/Img-animals-homePage/reptiles.jpg" class="d-block image-animal" alt="Image d'un caméléon">
+                    </div>
+                    <div class="carousel-item h-100">
+                        <p class="animal-name subtitle-text">Amphibiens</p>
+                        <img src="../Assets/Img-animals-homePage/Amphibiens.jpg" class="d-block image-animal" style="object-position: top;" alt="Image d'un serpent">
+                    </div>
+                    <div class="carousel-item h-100">
+                        <p class="animal-name subtitle-text">Poissons</p>
+                        <img src="../Assets/Img-animals-homePage/poissons.jpg" class="d-block image-animal" alt="Image d'un poisson">
+                    </div>
+                    <div class="carousel-item h-100">
+                        <p class="animal-name subtitle-text">Insectes</p>
+                        <img src="../Assets/Img-animals-homePage/insects.jpg" class="d-block image-animal" alt="Image d'une araignée">
+                    </div>
+                </div>
+                <!-- Icons pour passer l'image -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="5rem" height="5rem" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+                </svg>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <!-- Icon pour passer l'image -->
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="5rem" height="5rem" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                    </svg>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+    </div>
+    <!--Le bouton pour voir tous les animaux-->
+    <div class="container pb-4">
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <a href="#" role="button" class="btn btn-secondary mt-4 text-white">Tous les animaux</a>
+            </div>
+        </div>
+    </div>
+</section>
