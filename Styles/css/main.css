@@ -27,6 +27,11 @@
   font-weight: 200;
 }
 
+.link {
+  color: #7B5E2F;
+  text-decoration: none;
+}
+
 .text-justify {
   text-align: justify;
 }
@@ -49,6 +54,14 @@
   }
   .footer-mobile {
     padding-left: 30px;
+  }
+  .btn {
+    --bs-btn-font-size: 0.6rem !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .btn {
+    --bs-btn-font-size: 0.8rem !important;
   }
 }
 @media (min-width: 1440px) {
@@ -12091,7 +12104,17 @@ footer.footer {
 }
 
 main {
-  margin-bottom: 264px;
+  margin-bottom: 220px;
+}
+@media (min-width: 1440px) {
+  main {
+    margin-bottom: 260px;
+  }
+}
+@media (max-width: 426px) {
+  main {
+    margin-bottom: 160px;
+  }
 }
 
 .ligne {
@@ -12304,4 +12327,14 @@ section {
   .image-container .animal-name {
     font-size: 1.1rem;
   }
+}
+
+.link-btn-avis {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.link-btn-avis .link {
+  transform: translateX(-50%);
+  margin-left: 50%;
 }/*# sourceMappingURL=main.css.map */
