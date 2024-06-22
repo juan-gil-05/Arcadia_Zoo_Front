@@ -12148,36 +12148,36 @@ footer p.ligne {
   margin-bottom: 0px;
 }
 
-.big-titre {
+.big-titre-accueil {
   position: relative;
   background-color: black;
   width: 100%;
   height: 550px;
 }
 @media (max-width: 1024px) {
-  .big-titre {
+  .big-titre-accueil {
     height: 380px;
   }
 }
 @media (max-width: 426px) {
-  .big-titre {
+  .big-titre-accueil {
     height: 200px;
   }
-  .big-titre .big-titre-content h2, .big-titre .big-titre-content .h2 {
+  .big-titre-accueil .big-titre-content h2, .big-titre-accueil .big-titre-content .h2 {
     font-size: 0.85rem;
   }
 }
-.big-titre::before {
+.big-titre-accueil::before {
   position: absolute;
   content: "";
-  background-image: url(../../Assets/image_Bienvenue.jpg);
+  background-image: url(../../Assets/img-page-accueil/image_Bienvenue.jpg);
   background-position: left;
   background-size: cover;
   height: 100%;
   width: 100%;
   filter: opacity(0.7) drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
 }
-.big-titre .big-titre-content h2, .big-titre .big-titre-content .h2 {
+.big-titre-accueil .big-titre-content h2, .big-titre-accueil .big-titre-content .h2 {
   position: absolute;
   top: 40%;
   width: 45%;
@@ -12337,4 +12337,65 @@ section {
 .link-btn-avis .link {
   transform: translateX(-50%);
   margin-left: 50%;
+}
+
+.big-titre-habitats {
+  position: relative;
+  background-color: black;
+  width: 100%;
+  height: 550px;
+}
+@media (max-width: 1024px) {
+  .big-titre-habitats {
+    height: 380px;
+  }
+}
+@media (max-width: 768px) {
+  .big-titre-habitats {
+    height: 320px;
+  }
+}
+@media (max-width: 426px) {
+  .big-titre-habitats {
+    height: 170px;
+  }
+  .big-titre-habitats .big-titre-content h2, .big-titre-habitats .big-titre-content .h2 {
+    font-size: 0.85rem;
+  }
+}
+.big-titre-habitats::before {
+  position: absolute;
+  content: "";
+  background-image: url(../../Assets/Img-page-habitats/img_big-titre.jpg);
+  background-position: 11px -57px;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  filter: opacity(0.7) drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+}
+@media (max-width: 768px) {
+  .big-titre-habitats::before {
+    background-position: 0px -15px;
+  }
+}
+.big-titre-habitats .big-titre-content h2, .big-titre-habitats .big-titre-content .h2 {
+  position: absolute;
+  top: 44%;
+  width: 45%;
+  font-size: 3.5rem;
+}
+@media (max-width: 1024px) {
+  .big-titre-habitats .big-titre-content h2, .big-titre-habitats .big-titre-content .h2 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .big-titre-habitats .big-titre-content h2, .big-titre-habitats .big-titre-content .h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 426px) {
+  .big-titre-habitats .big-titre-content h2, .big-titre-habitats .big-titre-content .h2 {
+    font-size: 1.2rem;
+  }
 }/*# sourceMappingURL=main.css.map */

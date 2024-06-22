@@ -215,9 +215,9 @@ footer p.ligne{
 }
 
 //------------------------------------------------------------------------
-//SECTION DU BIG TITLE SUR LA PAGE D'ACCUEIL
+//SECTION DU BIG TITLE - PAGE D'ACCUEIL
 
-.big-titre{
+.big-titre-accueil{
     // Taille du conteneur qui aura l'image
     position: relative;
     background-color: black;
@@ -237,13 +237,13 @@ footer p.ligne{
     &::before{
         position: absolute;
         content: "";
-        background-image: url(../../Assets/image_Bienvenue.jpg); // je l'ai fait comme ca, car le main.css est dans un autre dossier (css)
+        background-image: url(../../Assets/img-page-accueil/image_Bienvenue.jpg); // je l'ai fait comme ca -> (../../), car le main.css est dans un autre dossier (css)
         background-position: left;
         background-size: cover;
         height: 100%; 
         width: 100%;
         filter: opacity(0.7)  drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
-        //background-attachment: fixed;   //Pour créer l'effet parallax  Pour l'instant, je le laisse comment commentaire
+        //background-attachment: fixed;   //Pour créer l'effet parallax,  Pour le moment, je le laisse comment commentaire
     }
     //modification du text sur l'image
     .big-titre-content h2{
@@ -255,12 +255,11 @@ footer p.ligne{
 }
 
 //------------------------------------------------------------------------------------------------
-//SECTION DES HABITATS SUR LA PAGE D'ACCUEIL
+//SECTION DES HABITATS - PAGE D'ACCUEIL
 
 section{
     box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2); // je met une petite ombre dans toutes les section
 }
-
 .container-img-habitats{
     //hauteur du conteneur qui a les images
     height: 600px;
@@ -327,7 +326,7 @@ section{
 }
 
 //------------------------------------------------------------------------------------------------------------
-//SECTION DES ANIMAUX - PAGE D'ACUUEIL 
+//SECTION DES ANIMAUX - PAGE D'ACCUEIL 
 .image-container{
     width: 100%;
     height: 500px;
@@ -398,7 +397,7 @@ section{
 }
 
 //--------------------------------------------------------------------------------------------------------------
-//SECTION DES AVIS DU ZOO
+//SECTION DES AVIS DU ZOO - PAG D'ACCUEIL
 
 .link-btn-avis{ //le style du lien et bouton de la section
         display: flex;
@@ -408,5 +407,61 @@ section{
     .link { // je met le lien au milieu 
         transform: translateX(-50%);
         margin-left: 50%;
+    }
+}
+
+//-----------------------------------------------------------------------------------------------------------------
+//SECTION DU BIG TITLE SUR LA PAGE DES HABITATS
+
+.big-titre-habitats{
+    // Taille du conteneur qui aura l'image
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 550px;
+    // Media queries pour ajuster l'hauteur de l'image et le text
+    @media (max-width : "1024px"){ // pour laptop, et tablet
+        height: 380px;
+    }
+    @media (max-width : "768px"){ // Pour Tablet
+        height: 320px;
+    }
+    @media (max-width : "426px"){ // Pour mobile
+        height: 170px;
+        .big-titre-content h2{
+            font-size: 0.85rem;
+        }
+    }
+    //Ajout de l'image
+    &::before{
+        position: absolute;
+        content: "";
+        background-image: url(../../Assets/Img-page-habitats/img_big-titre.jpg); // je l'ai fait comme ca -> (../../), car le main.css est dans un autre dossier (css)
+        background-position: 11px -57px;
+        @media (max-width : "768px"){ // Pour tablet
+            background-position: 0px -15px;
+        }
+        background-size: cover;
+        height: 100%; 
+        width: 100%;
+        filter: opacity(0.7)  drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+        //background-attachment: fixed;   //Pour créer l'effet parallax,  Pour le moment, je le laisse comment commentaire
+    }
+    //modification du text sur l'image
+    .big-titre-content h2{
+            position: absolute;
+            top: 44%;
+            width: 45%;
+            font-size: 3.5rem;
+
+            @media (max-width : "1024px"){ // Pour laptop
+                font-size: 2.5rem;
+            }
+            @media (max-width : "768px"){ // Pour Tablet
+                font-size: 2rem;
+            }
+            @media (max-width : "426px"){ // Pour mobile
+                font-size: 1.2rem;
+            }
     }
 }
