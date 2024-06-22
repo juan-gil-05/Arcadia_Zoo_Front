@@ -1,25 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
+    <!-- Lien vers les fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Signika:wght@300..700&display=swap"
+        rel="stylesheet">
+    <!-- Lien vers le style  -->
     <link rel="stylesheet" href="./Styles/css/main.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <title>Arcadia</title>
 </head>
-<body>
-    <header>ici c'est le header</header>
+
+<body class="bg-primary">
+    <header class="header">
+        <!-- Ceci c'est le navbar -->
+        <nav class="navbar navbar-expand-lg text-shadow">
+            <div class="container-fluid">
+                <!-- Logo du Arcadia -->
+                <img src="./Assets/Logo.png" alt="Logo Arcadia" class="img-logo ms-2">
+                <a class="navbar-brand title-text ms-2 text-light col" href="/">ARCADIA</a>
+                <!-- Menu 'Burger' pour le movil -->
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse content-text " id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-end"> <!-- Liens du menu -->
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Habitats</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Connexion</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
 
     <main id="main-page">
         <!-- Le contenu de ma page -->
     </main>
 
-    <footer>Ici c'est le footer</footer>
+    <!-- Ceci c'est le footer -->
+    <footer class="text-light footer bg-dark text-center">
+        <div class="row">
+            <!--Horaires d'ouverture-->
+            <div class="col-6 footer-mobile">
+                <h2 class="content-text fw-bold text-info text-shadow">Horaires d'ouverture</h2>
+                <p class="small-text">Lundi - Vendredi : 9h00 - 17h00 <br>
+                    Samedi - Dimanche : 10h00 - 18h00</p>
+            </div>
+            <!--Contact-->
+            <div class="col-6">
+                <h2 class="content-text fw-bold text-info text-shadow">contact</h2>
+                <!-- Section de contact avec icons-->
+                <p class="small-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-geo-alt-fill icon-footer" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                    </svg>Arcadia Zoo 1 Rue des Animaux <br>35000 Rennes, Bretagne<br>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-telephone-fill icon-footer" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                    </svg>+33 2 99 99 99 99<br>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-envelope-fill icon-footer" viewBox="0 0 16 16">
+                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                    </svg>info@arcadiazoo.fr
+                </p>               
+            </div>
+            <!--Text Arcadia-->
+            <div class="col-12 text-center"> 
+                <p class="small-text">Arcadia Zoo - Un monde d'aventure et de découverte au cœur de la Bretagne depuis 1960.</p>
+            </div>
+            <!--Text copyright-->
+            <div class="col-12 text-end">
+                <p class="small-text ligne">Copyright © [2024] Arcadia Zoo. Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
 
     <script type="module" src="./Router/Router.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

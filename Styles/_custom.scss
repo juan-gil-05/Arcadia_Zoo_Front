@@ -1,16 +1,412 @@
-// Custom.scss
-// Option A: Include all of Bootstrap
-
-// Include any default variable overrides here (though functions won't be available)
-
+// customisation des couleurs et les fonts
 $primary : #1A440C;
 $secondary : #709255;
 $info : #7B5E2F;
 $dark : #001D00;
-$font-family-sans-serif : "Asap", sans-serif !default;
-$font-family-serif : "Libre Franklin", serif !default;
+$font-family-sans-serif : "Asap", sans-serif !default; // headline et subtitle text
+$font-family-serif : "Libre Franklin", serif; // content Text
+$btn-font-family: $font-family-serif; // font des boutons
+$btn-font-weight: 600; // épaisseur du text des boutons 
 
+//style du text des titres
+.title-text { 
+    font-family: $font-family-sans-serif;
+    font-size: 3rem !important;
+    font-weight: 800;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+//style du text des sous-titres
+.subtitle-text{
+    font-family: $font-family-sans-serif;
+    font-size: 1.9rem;
+    font-weight: 600;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+//style du text du contenu
+.content-text { 
+    font-family: $font-family-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+//style du petit text 
+.small-text{
+    font-family: "signika", serif;
+    font-size: 0.9rem;
+    font-weight: 200;
+} 
 
+//Style des liens
+.link{
+    color: $info;
+    text-decoration: none;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+//Media queries pour le mobile
+@media (max-width: "426px"){
+    // pour le text du titre
+    .title-text{
+        font-size: 1.5rem !important;
+        font-weight: 600;
+    }
+    //pour le text du contenu 
+    .content-text{
+        font-size: 0.93rem;
+        font-weight: 500;
+    } 
+    // les sous-titres
+    .subtitle-text{
+        font-size: 1.3rem;
+    }
+    //le text petit
+    .small-text{
+        font-size: 0.62rem;
+        font-weight: 100;
+    }
+    //pour le footer en mobile
+    .footer-mobile{
+        padding-left: 30px;
+    }
+    // taille des boutons
+    .btn{
+        --bs-btn-font-size: 0.6rem !important; 
+    }
+}
+//Media Queries pour tablet
+@media (min-width : "768px") and (max-width : "1023px"){
+    // taille des bouton
+    .btn{
+        --bs-btn-font-size: 0.8rem !important; 
+    }
+}
+
+//Media Queries pour une laptop L
+@media (min-width : "1440px"){ // 
+    .content-text{
+        font-size: 2rem;
+    }
+    // les sous-titres
+    .subtitle-text{
+        font-size: 2.5rem;
+    }
+    .small-text{
+        font-size: 1.1rem;
+    }
+}
+
+.text-shadow {text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);} // ombre du text
+
+//----------------------------------------------------------------------------------------
+
+//Importation de bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-// Then add additional custom code here
+//----------------------------------------------------------------------------------------
+
+//j'ai fait ca pour que l'image du principal contenu sois visible
+.header{
+    position: relative;
+    z-index: 1;
+}
+// Mettre le navbar devant
+.navbar{
+    position: absolute;
+    width: 100%;
+}
+
+// Ajout une petite animation aux liens du navbar 
+.nav-link {
+    position: relative; /* Nécessaire pour le ::after */
+    padding: 5px 0 !important; // Changement du padding original bootstrap
+    margin-right: var(--bs-navbar-nav-link-padding-x);
+    margin-left: var(--bs-navbar-nav-link-padding-x);
+    line-height: 1; // Je colle la ligne au text
+    display: inline-block;
+    &::after{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 3px; /* l'épaisseur de la ligne */
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        transition: width 0.3s ease-in-out; /* ajout de la transition */
+    }
+    &:hover::after{
+        width: 100%; /* étendre la ligne */
+    }
+}
+
+//------------------------------------------------------------------------------------------
+
+// Corecction du logo avec le responsive
+.img-logo {
+    width: 50px;
+    transition: 0.6s;
+    //animation pour zoomer l'image
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+@media (max-width: 576px){
+    .img-logo{
+        width: 40px;  // pour les téléphones
+    }
+}
+
+//---------------------------------------------------------------------------------------
+
+// j'ai modifié le HTML pour que le footer puisse se mettre en bas de la page
+html{
+    position: relative; 
+    min-height: 100%;
+}
+// je met le footer en bas de la page
+footer.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 12px 5px;
+}
+//pour que le main ne sois pas cache pour le footer 
+main{
+    margin-bottom: 220px;
+    //pour laptop l
+    @media (min-width : "1440px"){
+        margin-bottom: 260px;
+    }
+    //pour les mobiles
+    @media (max-width : "426px"){
+        margin-bottom: 160px;
+    }
+}
+// Ajout d'une ligne sur le text du copyright
+.ligne{
+    position: relative;
+    margin-top: 10px;
+    left: -15px;
+    margin-right: -27px;
+}
+.ligne::before{
+    display: block;
+    position: absolute;
+    content: "";
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+}
+footer p{
+    margin-bottom: 0.5rem;
+}
+//modification des icons du footer
+.icon-footer{
+    fill: $info;
+    padding: 0px 2px 2px 0px;
+}
+//Ajout du padding au text du copyright
+footer p.ligne{
+    padding-right: 15px;
+    margin-bottom: 0px;
+}
+
+//------------------------------------------------------------------------
+//SECTION DU BIG TITLE SUR LA PAGE D'ACCUEIL
+
+.big-titre{
+    // Taille du conteneur qui aura l'image
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 550px;
+    // Media queries pour ajuster l'hauteur de l'image et le text
+    @media (max-width : "1024px"){ // pour laptop, et tablet
+        height: 380px;
+    }
+    @media (max-width : "426px"){ // Pour mobile
+        height: 200px;
+        .big-titre-content h2{
+            font-size: 0.85rem;
+        }
+    }
+    //Ajout de l'image
+    &::before{
+        position: absolute;
+        content: "";
+        background-image: url(../../Assets/image_Bienvenue.jpg); // je l'ai fait comme ca, car le main.css est dans un autre dossier (css)
+        background-position: left;
+        background-size: cover;
+        height: 100%; 
+        width: 100%;
+        filter: opacity(0.7)  drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+        //background-attachment: fixed;   //Pour créer l'effet parallax  Pour l'instant, je le laisse comment commentaire
+    }
+    //modification du text sur l'image
+    .big-titre-content h2{
+            position: absolute;
+            top: 40%;
+            width: 45%;
+            margin-left: 15px;
+    }
+}
+
+//------------------------------------------------------------------------------------------------
+//SECTION DES HABITATS SUR LA PAGE D'ACCUEIL
+
+section{
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2); // je met une petite ombre dans toutes les section
+}
+
+.container-img-habitats{
+    //hauteur du conteneur qui a les images
+    height: 600px;
+    //Media queries du conteneur qui a les images
+    @media (max-width : "1024px"){ //laptop
+        height: 400px;
+    }
+    @media (max-width : "768px"){ //tablet
+        height: 300px;
+    }
+    @media (max-width : "426px"){ //mobile
+        height: 150px;
+    }
+    // en position relative pour que le titre du habitat sois dans l'image
+    .col{
+        position: relative;
+        transition: 0.6s;
+        cursor: pointer;
+        //animation pour zoomer l'image
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+    // Les images des habitats
+    .image-habitats{
+        width: 100%;
+        height: 100%;
+        border-radius: 5%;
+        object-fit: cover;
+        object-position: 78%;
+        filter: brightness(0.9) drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5)); //un peu obscur et avec un petit ombre            
+    } 
+    // Le titre de l'habitat sur l'image 
+    .habitat-title{
+        position: absolute;
+        bottom: 2%;
+        left: 12%;
+    }
+}
+
+//--------------------------------------------------------------------------------------------------------------
+//SECTION DES SERVICES - PAGE D'ACCUEIL
+
+.card{
+    --bs-card-border-color: $primary;
+    --bs-card-bg: $primary;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3); // je met une petite ombre dans toutes les cartes
+    transition: 0.6s;
+    cursor: pointer;
+    //animation pour zoomer l'image
+    &:hover{
+        transform: scale(1.05);
+    }
+    //l'image de la carte
+    .card-img-top{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .image-card{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+//------------------------------------------------------------------------------------------------------------
+//SECTION DES ANIMAUX - PAGE D'ACUUEIL 
+.image-container{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    //mediaqueries pour le conteneur de l'image 
+    @media (max-width : "1024px"){//laptop
+        height: 400px;
+    }
+    @media (max-width : "768px"){//tablet
+        height: 300px;
+    }
+    @media (max-width : "426px"){//mobile
+        height: 200px;
+    }
+    //style du carrousel des images 
+    .carousel{
+        position: absolute;
+        width: 80%;
+        padding: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); //Pour qu'il soit au millieu
+    }
+    //Style de l'image
+    .image-animal{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5px;
+    }
+    //Style pour invertir le sens des images 
+    .img-invert{
+        transform: scaleX(-1); 
+    }
+    //Style des boutons du carrousel
+    .carousel-control-prev, .carousel-control-next{
+        opacity: 0.9;
+        width: 6%;
+        @media (max-width : "426px"){
+            width: 7%;
+            margin: 0 7px 0 7px;
+        }
+    }
+    //Style du nom d'espèce des animaux 
+    .animal-name{
+        color: white;
+        position: absolute;
+        font-size: 4rem;
+        margin: 0 !important;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%); //Pour qu'il soit au millieu
+        text-transform: uppercase;
+        z-index: 1;
+        //mediaqueries pour les noms d'espèces des animaux
+        @media (max-width : "1024px"){//laptop
+            font-size: 3rem;
+        }
+        @media (max-width : "768px"){//tablet
+            font-size: 2rem;
+        }
+        @media (max-width : "426px"){//mobile
+            font-size: 1.1rem;
+        }
+}
+}
+
+//--------------------------------------------------------------------------------------------------------------
+//SECTION DES AVIS DU ZOO
+
+.link-btn-avis{ //le style du lien et bouton de la section
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    .link { // je met le lien au milieu 
+        transform: translateX(-50%);
+        margin-left: 50%;
+    }
+}
