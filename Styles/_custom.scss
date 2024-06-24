@@ -18,20 +18,20 @@ $btn-font-weight: 600; // épaisseur du text des boutons
 //style du text des sous-titres
 .subtitle-text{
     font-family: $font-family-sans-serif;
-    font-size: 1.9rem;
+    font-size: 2.5rem !important;
     font-weight: 600;
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 //style du text du contenu
 .content-text { 
     font-family: $font-family-serif;
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
     font-weight: 600;
 }
 //style du petit text 
 .small-text{
     font-family: "signika", serif;
-    font-size: 0.9rem;
+    font-size: 1rem !important;
     font-weight: 200;
 } 
 
@@ -54,16 +54,16 @@ $btn-font-weight: 600; // épaisseur du text des boutons
     }
     //pour le text du contenu 
     .content-text{
-        font-size: 0.93rem;
+        font-size: 0.8rem !important;
         font-weight: 500;
     } 
     // les sous-titres
     .subtitle-text{
-        font-size: 1.3rem;
+        font-size: 1.3rem !important;
     }
     //le text petit
     .small-text{
-        font-size: 0.62rem;
+        font-size: 0.62rem !important;
         font-weight: 100;
     }
     //pour le footer en mobile
@@ -81,19 +81,8 @@ $btn-font-weight: 600; // épaisseur du text des boutons
     .btn{
         --bs-btn-font-size: 0.8rem !important; 
     }
-}
-
-//Media Queries pour une laptop L
-@media (min-width : "1440px"){ // 
-    .content-text{
-        font-size: 2rem;
-    }
-    // les sous-titres
     .subtitle-text{
-        font-size: 2.5rem;
-    }
-    .small-text{
-        font-size: 1.1rem;
+        font-size: 1.8rem !important;
     }
 }
 
@@ -215,9 +204,9 @@ footer p.ligne{
 }
 
 //------------------------------------------------------------------------
-//SECTION DU BIG TITLE SUR LA PAGE D'ACCUEIL
+//SECTION DU BIG TITLE - PAGE D'ACCUEIL
 
-.big-titre{
+.big-titre-accueil{
     // Taille du conteneur qui aura l'image
     position: relative;
     background-color: black;
@@ -230,37 +219,36 @@ footer p.ligne{
     @media (max-width : "426px"){ // Pour mobile
         height: 200px;
         .big-titre-content h2{
-            font-size: 0.85rem;
+            font-size: 0.85rem !important;
         }
     }
     //Ajout de l'image
     &::before{
         position: absolute;
         content: "";
-        background-image: url(../../Assets/image_Bienvenue.jpg); // je l'ai fait comme ca, car le main.css est dans un autre dossier (css)
+        background-image: url(../../Assets/img-page-accueil/image_Bienvenue.jpg); // je l'ai fait comme ca -> (../../), car le main.css est dans un autre dossier (css)
         background-position: left;
         background-size: cover;
         height: 100%; 
         width: 100%;
         filter: opacity(0.7)  drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
-        //background-attachment: fixed;   //Pour créer l'effet parallax  Pour l'instant, je le laisse comment commentaire
+        //background-attachment: fixed;   //Pour créer l'effet parallax,  Pour le moment, je le laisse comment commentaire
     }
     //modification du text sur l'image
     .big-titre-content h2{
             position: absolute;
             top: 40%;
-            width: 45%;
-            margin-left: 15px;
+            width: 34%;
+            margin-left: 40px;
     }
 }
 
 //------------------------------------------------------------------------------------------------
-//SECTION DES HABITATS SUR LA PAGE D'ACCUEIL
+//SECTION DES HABITATS - PAGE D'ACCUEIL
 
 section{
     box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2); // je met une petite ombre dans toutes les section
 }
-
 .container-img-habitats{
     //hauteur du conteneur qui a les images
     height: 600px;
@@ -277,11 +265,11 @@ section{
     // en position relative pour que le titre du habitat sois dans l'image
     .col{
         position: relative;
-        transition: 0.6s;
+        transition: 0.4s;
         cursor: pointer;
         //animation pour zoomer l'image
         &:hover{
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
     }
     // Les images des habitats
@@ -308,11 +296,11 @@ section{
     --bs-card-border-color: $primary;
     --bs-card-bg: $primary;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3); // je met une petite ombre dans toutes les cartes
-    transition: 0.6s;
+    transition: 0.4s;
     cursor: pointer;
     //animation pour zoomer l'image
     &:hover{
-        transform: scale(1.05);
+        transform: scale(1.03);
     }
     //l'image de la carte
     .card-img-top{
@@ -327,7 +315,7 @@ section{
 }
 
 //------------------------------------------------------------------------------------------------------------
-//SECTION DES ANIMAUX - PAGE D'ACUUEIL 
+//SECTION DES ANIMAUX - PAGE D'ACCUEIL 
 .image-container{
     width: 100%;
     height: 500px;
@@ -377,7 +365,7 @@ section{
     .animal-name{
         color: white;
         position: absolute;
-        font-size: 4rem;
+        font-size: 3rem !important;
         margin: 0 !important;
         top: 50%;
         left: 25%;
@@ -386,19 +374,19 @@ section{
         z-index: 1;
         //mediaqueries pour les noms d'espèces des animaux
         @media (max-width : "1024px"){//laptop
-            font-size: 3rem;
+            font-size: 2.3rem !important;
         }
         @media (max-width : "768px"){//tablet
-            font-size: 2rem;
+            font-size: 2rem !important;
         }
         @media (max-width : "426px"){//mobile
-            font-size: 1.1rem;
+            font-size: 1.1rem !important;
         }
 }
 }
 
 //--------------------------------------------------------------------------------------------------------------
-//SECTION DES AVIS DU ZOO
+//SECTION DES AVIS DU ZOO - PAG D'ACCUEIL
 
 .link-btn-avis{ //le style du lien et bouton de la section
         display: flex;
@@ -408,5 +396,99 @@ section{
     .link { // je met le lien au milieu 
         transform: translateX(-50%);
         margin-left: 50%;
+    }
+}
+
+//-----------------------------------------------------------------------------------------------------------------
+//SECTION DU BIG TITLE SUR LA PAGE DES HABITATS
+
+.big-titre-habitats{
+    // Taille du conteneur qui aura l'image
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 550px;
+    // Media queries pour ajuster l'hauteur de l'image et le text
+    @media (max-width : "1024px"){ // pour laptop, et tablet
+        height: 380px;
+    }
+    @media (max-width : "768px"){ // Pour Tablet
+        height: 320px;
+    }
+    @media (max-width : "426px"){ // Pour mobile
+        height: 170px;
+        .big-titre-content h2{
+            font-size: 0.85rem !important;
+        }
+    }
+    //Ajout de l'image
+    &::before{
+        position: absolute;
+        content: "";
+        background-image: url(../../Assets/Img-page-habitats/img_big-titre.jpg); // je l'ai fait comme ca -> (../../), car le main.css est dans un autre dossier (css)
+        background-position: 11px -57px;
+        @media (max-width : "768px"){ // Pour tablet
+            background-position: 0px -15px;
+        }
+        background-size: cover;
+        height: 100%; 
+        width: 100%;
+        filter: opacity(0.7)  drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+        //background-attachment: fixed;   //Pour créer l'effet parallax,  Pour le moment, je le laisse comment commentaire
+    }
+    //modification du text sur l'image
+    .big-titre-content h2{
+            position: absolute;
+            top: 44%;
+            width: 45%;
+            font-size: 3.5rem !important;
+
+            @media (max-width : "1024px"){ // Pour laptop
+                font-size: 2.5rem !important;
+            }
+            @media (max-width : "768px"){ // Pour Tablet
+                font-size: 2rem !important;
+            }
+            @media (max-width : "426px"){ // Pour mobile
+                font-size: 1.2rem !important;
+            }
+    }
+}
+
+//Les habitats avec ces images
+.img-container{
+    position: relative;
+    padding-top: 15px;
+    //animation pour zoomer l'image
+    transition: 0.4s;
+    &:hover{
+        transform: scale(1.03);
+    }
+    //images des habitats
+    .img-habitat{
+        cursor: pointer;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        filter: drop-shadow(2px 4px 5px rgb(30, 30, 30)); //ombre
+        border-radius: 5%;
+    }
+    //les noms des habitats
+    .name-habitat{
+        cursor: pointer;
+        position: absolute;
+        text-transform: uppercase;
+        bottom: 10%;
+        color: white;
+        padding: 5px 15% 5px 10px; // Pour que le text sois dans une "boite"
+        background-color: $info;
+        border-radius: 0 15px 15px 0;
+
+        @media (max-width : "768px"){ // Pour tablet
+            font-size: 1rem !important;
+        }
+        @media (max-width : "426px"){// Pour mobile
+            font-size: 0.8rem !important;
+        }
     }
 }
