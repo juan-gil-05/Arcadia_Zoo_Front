@@ -163,14 +163,18 @@ footer.footer{
 }
 //pour que le main ne sois pas cache pour le footer 
 main{
-    margin-bottom: 220px;
+    margin-bottom: 240px;
     //pour laptop l
     @media (min-width : "1440px"){
         margin-bottom: 260px;
     }
+    //pour tablet
+    @media (min-width : "768px"){
+        margin-bottom: 300px;
+    }
     //pour les mobiles
-    @media (max-width : "426px"){
-        margin-bottom: 160px;
+    @media (max-width : "431px"){
+        margin-bottom: 175px;
     }
 }
 // Ajout d'une ligne sur le text du copyright
@@ -587,5 +591,89 @@ section{
     left: 40% !important;
     @media (max-width : "431px"){ // mobile
         width: 330px !important;
+    }
+}
+
+//--------------------------------------------------------------------------------------------------------------------
+//SECTION DES ANIMAUX DE LA SAVANE
+.savane-animals{
+    //Style du titre
+    h2{
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+    }
+    //Style des liens dans les images
+    a{
+        width: 100%;
+        cursor: default;
+    }
+    // animation pour faire apparaitre les image quand on scroll
+    @keyframes show{
+        from{
+            opacity: 0;
+            scale: 25%;
+        }
+
+        to{
+            opacity: 1;
+            scale: 100%;
+        }
+    }
+    //style des images
+    img{
+        //animation des images
+        view-timeline-name: --image;
+        view-timeline-axis: block;
+        animation-timeline: --image;
+        animation-name: show;
+        animation-range: entry 25% cover 30%;
+        animation-fill-mode: both;
+
+        width: 100%;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        cursor: pointer;
+        @media (max-width : "1024px"){ //laptop
+            height: 200px;
+        }
+        @media (max-width : "431px"){ //mobile
+            height: 120px;
+        }
+    }
+    //style des certaines images
+    .lion-img{
+        transform: scaleX(-1);
+    }
+    .elephant-img{
+        object-position: top;
+    }
+    .hippopotame-img{
+        object-position: right;
+    }
+    .col{ // je met les images bien au millieu
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        position: relative;
+        @media (max-width : "431px"){ //mobile
+            margin-top: 15px; 
+        }
+    }
+
+    p{  // je position les nom des animaux 
+        position: absolute;
+        color: white;
+        font-size: 2rem;
+        bottom: 5%;
+        cursor: pointer;
+        @media (max-width : "1024px"){ //laptop
+            font-size: 1.5rem;
+        }
+        @media (max-width : "431px"){ //mobile
+            font-size: 0.9rem;
+            bottom: 3%;
+        }
     }
 }
