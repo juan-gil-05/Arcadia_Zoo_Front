@@ -36,7 +36,7 @@
   text-align: justify;
 }
 
-@media (max-width: 426px) {
+@media (max-width: 431px) {
   .title-text {
     font-size: 1.5rem !important;
     font-weight: 600;
@@ -12096,16 +12096,21 @@ footer.footer {
 }
 
 main {
-  margin-bottom: 220px;
+  margin-bottom: 240px;
 }
 @media (min-width: 1440px) {
   main {
     margin-bottom: 260px;
   }
 }
-@media (max-width: 426px) {
+@media (min-width: 768px) {
   main {
-    margin-bottom: 160px;
+    margin-bottom: 300px;
+  }
+}
+@media (max-width: 431px) {
+  main {
+    margin-bottom: 175px;
   }
 }
 
@@ -12151,7 +12156,7 @@ footer p.ligne {
     height: 380px;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 431px) {
   .big-titre-accueil {
     height: 200px;
   }
@@ -12193,7 +12198,7 @@ section {
     height: 300px;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 431px) {
   .container-img-habitats {
     height: 150px;
   }
@@ -12259,7 +12264,7 @@ section {
     height: 300px;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 431px) {
   .image-container {
     height: 200px;
   }
@@ -12288,7 +12293,7 @@ section {
   opacity: 0.9;
   width: 6%;
 }
-@media (max-width: 426px) {
+@media (max-width: 431px) {
   .image-container .carousel-control-prev, .image-container .carousel-control-next {
     width: 7%;
     margin: 0 7px 0 7px;
@@ -12315,7 +12320,7 @@ section {
     font-size: 2rem !important;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 431px) {
   .image-container .animal-name {
     font-size: 1.1rem !important;
   }
@@ -12347,7 +12352,7 @@ section {
     height: 320px;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 431px) {
   .big-titre-habitats {
     height: 170px;
   }
@@ -12386,7 +12391,7 @@ section {
     font-size: 2rem !important;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 431px) {
   .big-titre-habitats .big-titre-content h2, .big-titre-habitats .big-titre-content .h2 {
     font-size: 1.2rem !important;
   }
@@ -12424,8 +12429,200 @@ section {
     font-size: 1rem !important;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 431px) {
   .img-container .name-habitat {
     font-size: 0.8rem !important;
+  }
+}
+
+.big-titre-savane-habitat {
+  position: relative;
+  background-color: black;
+  width: 100%;
+  height: 700px;
+}
+@media (max-width: 1024px) {
+  .big-titre-savane-habitat {
+    height: 380px;
+  }
+}
+@media (max-width: 768px) {
+  .big-titre-savane-habitat {
+    height: 350px;
+  }
+}
+@media (max-width: 431px) {
+  .big-titre-savane-habitat {
+    height: 300px;
+  }
+}
+.big-titre-savane-habitat::before {
+  position: absolute;
+  content: "";
+  background-image: url(../../Assets/Img-page-habitats/savane.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  filter: opacity(0.5) drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+}
+.big-titre-savane-habitat .big-titre-content {
+  position: relative;
+  height: 100%;
+}
+.big-titre-savane-habitat .big-titre-content .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease;
+}
+.big-titre-savane-habitat .big-titre-content .container .container-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .big-titre-savane-habitat .big-titre-content .container .container-img {
+    display: none;
+  }
+}
+.big-titre-savane-habitat .big-titre-content .container h2, .big-titre-savane-habitat .big-titre-content .container .h2 {
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .big-titre-savane-habitat .big-titre-content .container h2, .big-titre-savane-habitat .big-titre-content .container .h2 {
+    font-size: 2rem !important;
+  }
+}
+@media (max-width: 431px) {
+  .big-titre-savane-habitat .big-titre-content .container h2, .big-titre-savane-habitat .big-titre-content .container .h2 {
+    font-size: 1.3rem !important;
+  }
+}
+.big-titre-savane-habitat .big-titre-content .container p {
+  color: white;
+  font-size: 1.4rem !important;
+  font-weight: 300;
+}
+@media (max-width: 1024px) {
+  .big-titre-savane-habitat .big-titre-content .container p {
+    font-size: 0.9rem !important;
+  }
+}
+@media (max-width: 431px) {
+  .big-titre-savane-habitat .big-titre-content .container p {
+    font-size: 0.7rem !important;
+  }
+}
+.big-titre-savane-habitat .big-titre-content .img-big-titre {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 10px;
+  background-color: #7B5E2F;
+}
+@media (max-width: 1024px) {
+  .big-titre-savane-habitat .big-titre-content .img-big-titre {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.move-left {
+  width: 600px !important;
+  left: 40% !important;
+}
+@media (max-width: 431px) {
+  .move-left {
+    width: 330px !important;
+  }
+}
+
+.savane-animals h2, .savane-animals .h2 {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+.savane-animals a {
+  width: 100%;
+  cursor: default;
+}
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+.savane-animals img {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: show;
+  animation-range: entry 25% cover 30%;
+  animation-fill-mode: both;
+  width: 100%;
+  height: 300px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .savane-animals img {
+    height: 200px;
+  }
+}
+@media (max-width: 431px) {
+  .savane-animals img {
+    height: 120px;
+  }
+}
+.savane-animals .lion-img {
+  transform: scaleX(-1);
+}
+.savane-animals .elephant-img {
+  -o-object-position: top;
+     object-position: top;
+}
+.savane-animals .hippopotame-img {
+  -o-object-position: right;
+     object-position: right;
+}
+.savane-animals .col {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  position: relative;
+}
+@media (max-width: 431px) {
+  .savane-animals .col {
+    margin-top: 15px;
+  }
+}
+.savane-animals p {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  bottom: 5%;
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .savane-animals p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 431px) {
+  .savane-animals p {
+    font-size: 0.9rem;
+    bottom: 3%;
   }
 }/*# sourceMappingURL=main.css.map */

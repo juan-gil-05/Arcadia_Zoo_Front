@@ -46,7 +46,7 @@ $btn-font-weight: 600; // épaisseur du text des boutons
 }
 
 //Media queries pour le mobile
-@media (max-width: "426px"){
+@media (max-width: "431px"){
     // pour le text du titre
     .title-text{
         font-size: 1.5rem !important;
@@ -163,14 +163,18 @@ footer.footer{
 }
 //pour que le main ne sois pas cache pour le footer 
 main{
-    margin-bottom: 220px;
+    margin-bottom: 240px;
     //pour laptop l
     @media (min-width : "1440px"){
         margin-bottom: 260px;
     }
+    //pour tablet
+    @media (min-width : "768px"){
+        margin-bottom: 300px;
+    }
     //pour les mobiles
-    @media (max-width : "426px"){
-        margin-bottom: 160px;
+    @media (max-width : "431px"){
+        margin-bottom: 175px;
     }
 }
 // Ajout d'une ligne sur le text du copyright
@@ -216,7 +220,7 @@ footer p.ligne{
     @media (max-width : "1024px"){ // pour laptop, et tablet
         height: 380px;
     }
-    @media (max-width : "426px"){ // Pour mobile
+    @media (max-width : "431px"){ // Pour mobile
         height: 200px;
         .big-titre-content h2{
             font-size: 0.85rem !important;
@@ -243,7 +247,6 @@ footer p.ligne{
     }
 }
 
-//------------------------------------------------------------------------------------------------
 //SECTION DES HABITATS - PAGE D'ACCUEIL
 
 section{
@@ -259,8 +262,8 @@ section{
     @media (max-width : "768px"){ //tablet
         height: 300px;
     }
-    @media (max-width : "426px"){ //mobile
-        height: 150px;
+    @media (max-width : "431px"){ //mobile
+    height: 150px;
     }
     // en position relative pour que le titre du habitat sois dans l'image
     .col{
@@ -289,7 +292,6 @@ section{
     }
 }
 
-//--------------------------------------------------------------------------------------------------------------
 //SECTION DES SERVICES - PAGE D'ACCUEIL
 
 .card{
@@ -314,7 +316,6 @@ section{
     }
 }
 
-//------------------------------------------------------------------------------------------------------------
 //SECTION DES ANIMAUX - PAGE D'ACCUEIL 
 .image-container{
     width: 100%;
@@ -328,7 +329,7 @@ section{
     @media (max-width : "768px"){//tablet
         height: 300px;
     }
-    @media (max-width : "426px"){//mobile
+    @media (max-width : "431px"){//mobile
         height: 200px;
     }
     //style du carrousel des images 
@@ -356,7 +357,7 @@ section{
     .carousel-control-prev, .carousel-control-next{
         opacity: 0.9;
         width: 6%;
-        @media (max-width : "426px"){
+        @media (max-width : "431px"){
             width: 7%;
             margin: 0 7px 0 7px;
         }
@@ -379,14 +380,13 @@ section{
         @media (max-width : "768px"){//tablet
             font-size: 2rem !important;
         }
-        @media (max-width : "426px"){//mobile
+        @media (max-width : "431px"){//mobile
             font-size: 1.1rem !important;
         }
 }
 }
 
-//--------------------------------------------------------------------------------------------------------------
-//SECTION DES AVIS DU ZOO - PAG D'ACCUEIL
+//SECTION DES AVIS DU ZOO - PAGE D'ACCUEIL
 
 .link-btn-avis{ //le style du lien et bouton de la section
         display: flex;
@@ -400,8 +400,7 @@ section{
 }
 
 //-----------------------------------------------------------------------------------------------------------------
-//SECTION DU BIG TITLE SUR LA PAGE DES HABITATS
-
+//SECTION DU BIG TITLE SUR LA PAGE DE TOUS LES HABITATS
 .big-titre-habitats{
     // Taille du conteneur qui aura l'image
     position: relative;
@@ -415,7 +414,7 @@ section{
     @media (max-width : "768px"){ // Pour Tablet
         height: 320px;
     }
-    @media (max-width : "426px"){ // Pour mobile
+    @media (max-width : "431px"){ // Pour mobile
         height: 170px;
         .big-titre-content h2{
             font-size: 0.85rem !important;
@@ -449,14 +448,15 @@ section{
             @media (max-width : "768px"){ // Pour Tablet
                 font-size: 2rem !important;
             }
-            @media (max-width : "426px"){ // Pour mobile
+            @media (max-width : "431px"){ // Pour mobile
                 font-size: 1.2rem !important;
             }
     }
 }
 
-//Les habitats avec ces images
+//SECTION DE TOUS LES HABITATS DU ZOO
 .img-container{
+    //Les habitats avec ces images
     position: relative;
     padding-top: 15px;
     //animation pour zoomer l'image
@@ -487,8 +487,193 @@ section{
         @media (max-width : "768px"){ // Pour tablet
             font-size: 1rem !important;
         }
-        @media (max-width : "426px"){// Pour mobile
+        @media (max-width : "431px"){// Pour mobile
             font-size: 0.8rem !important;
+        }
+    }
+}
+
+//-----------------------------------------------------------------------------------------------------------------
+//SECTION DU BIG TITLE SUR LA PAGE HABITAT DE LA SAVANE
+.big-titre-savane-habitat{
+    // Taille du conteneur qui aura l'image
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 700px;
+    // Media queries pour ajuster l'hauteur de l'image et le text
+    @media (max-width : "1024px"){ // pour laptop
+        height: 380px;
+    }
+    @media (max-width : "768px"){ // Pour Tablet
+        height: 350px;
+    }
+    @media (max-width : "431px"){ // Pour mobile
+        height: 300px;
+    }
+
+    //Ajout de l'image
+    &::before{
+        position: absolute;
+        content: "";
+        background-image: url(../../Assets/Img-page-habitats/savane.jpg); // je l'ai fait comme ca -> (../../), car le main.css est dans un autre dossier (css)
+        background-position: center;
+        background-size: cover;
+        height: 100%; 
+        width: 100%;
+        filter: opacity(0.5)  drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+        // background-attachment: fixed;   //Pour créer l'effet parallax,  Pour le moment, je le laisse comment commentaire
+    }
+
+    // La description de l'habitat
+    .big-titre-content{
+        position: relative;
+        height: 100%;
+        //On le met qu millieu 
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: 0.5s ease; // transition au moment d'ouvir le menu burger  
+            // on position l'image et le text =
+            .container-img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @media (max-width : "768px"){ //Pour tablet
+                    display: none; // on enlève l'image car il n'y a pas assez de la place 
+                }
+            }
+            //style du titre de l'habitat
+            h2{
+                text-transform: uppercase;
+                color: white;
+                text-align: center;           
+                @media (max-width : "1024px"){ //laptop
+                    font-size: 2rem !important;
+                }
+                @media (max-width : "431px"){ // mobile
+                    font-size: 1.3rem !important;
+                }
+            }
+            //style de la description de l'habitat
+            p{
+                color: white;
+                font-size: 1.4rem !important;
+                font-weight: 300;
+                @media (max-width : "1024px"){ //laptop
+                    font-size: 0.9rem !important;
+                }
+                @media (max-width : "431px"){ // mobile
+                    font-size: 0.7rem !important;
+                }
+            }
+        }
+        //Style de l'image
+        .img-big-titre{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            padding: 10px; //je met un petit border à l'image
+            background-color: $info;
+            @media (max-width : "1024px"){ //Pour Laptop
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+}  
+// classe pour bouger à gauche la description de l'habitat en cliquant sur le menu burger
+.move-left{
+    width: 600px !important;
+    left: 40% !important;
+    @media (max-width : "431px"){ // mobile
+        width: 330px !important;
+    }
+}
+
+//--------------------------------------------------------------------------------------------------------------------
+//SECTION DES ANIMAUX DE LA SAVANE
+.savane-animals{
+    //Style du titre
+    h2{
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+    }
+    //Style des liens dans les images
+    a{
+        width: 100%;
+        cursor: default;
+    }
+    // animation pour faire apparaitre les image quand on scroll
+    @keyframes show{
+        from{
+            opacity: 0;
+            scale: 25%;
+        }
+
+        to{
+            opacity: 1;
+            scale: 100%;
+        }
+    }
+    //style des images
+    img{
+        //animation des images
+        view-timeline-name: --image;
+        view-timeline-axis: block;
+        animation-timeline: --image;
+        animation-name: show;
+        animation-range: entry 25% cover 30%;
+        animation-fill-mode: both;
+
+        width: 100%;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        cursor: pointer;
+        @media (max-width : "1024px"){ //laptop
+            height: 200px;
+        }
+        @media (max-width : "431px"){ //mobile
+            height: 120px;
+        }
+    }
+    //style des certaines images
+    .lion-img{
+        transform: scaleX(-1);
+    }
+    .elephant-img{
+        object-position: top;
+    }
+    .hippopotame-img{
+        object-position: right;
+    }
+    .col{ // je met les images bien au millieu
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        position: relative;
+        @media (max-width : "431px"){ //mobile
+            margin-top: 15px; 
+        }
+    }
+
+    p{  // je position les nom des animaux 
+        position: absolute;
+        color: white;
+        font-size: 2rem;
+        bottom: 5%;
+        cursor: pointer;
+        @media (max-width : "1024px"){ //laptop
+            font-size: 1.5rem;
+        }
+        @media (max-width : "431px"){ //mobile
+            font-size: 0.9rem;
+            bottom: 3%;
         }
     }
 }
