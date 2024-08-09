@@ -12735,4 +12735,77 @@ section {
   .move-left {
     width: 295px !important;
   }
+}
+
+.jungle-animals h2, .jungle-animals .h2 {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+.jungle-animals a {
+  width: 100%;
+  cursor: default;
+}
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+.jungle-animals img {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: show;
+  animation-range: entry 25% cover 30%;
+  animation-fill-mode: both;
+  width: 100%;
+  height: 300px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .jungle-animals img {
+    height: 200px;
+  }
+}
+@media (max-width: 431px) {
+  .jungle-animals img {
+    height: 120px;
+  }
+}
+.jungle-animals .col {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  position: relative;
+}
+@media (max-width: 431px) {
+  .jungle-animals .col {
+    margin-top: 15px;
+  }
+}
+.jungle-animals p {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  bottom: 5%;
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .jungle-animals p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 431px) {
+  .jungle-animals p {
+    font-size: 0.9rem;
+    bottom: 3%;
+  }
 }/*# sourceMappingURL=main.css.map */
