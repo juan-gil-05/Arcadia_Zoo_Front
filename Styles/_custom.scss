@@ -522,7 +522,7 @@ section{
         height: 100%; 
         width: 100%;
         filter: opacity(0.5)  drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
-        // background-attachment: fixed;   //Pour créer l'effet parallax,  Pour le moment, je le laisse comment commentaire
+         background-attachment: fixed;   //Pour créer l'effet parallax,  Pour le moment, je le laisse comment commentaire
     }
 
     // La description de l'habitat
@@ -675,5 +675,106 @@ section{
             font-size: 0.9rem;
             bottom: 3%;
         }
+    }
+}
+
+//------------------------------------------------------------------------------------------------------------
+//SECTION DU BIG TITLE SUR LA PAGE HABITAT DE LA JUNGLE
+.big-titre-jungle-habitat{
+    // Taille du conteneur qui aura l'image
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 700px;
+    // Media queries pour ajuster l'hauteur de l'image et le text
+    @media (max-width : "1024px"){ // pour laptop
+        height: 380px;
+    }
+    @media (max-width : "768px"){ // Pour Tablet
+        height: 350px;
+    }
+    @media (max-width : "431px"){ // Pour mobile
+        height: 300px;
+    }
+
+    //Ajout de l'image
+    &::before{
+        position: absolute;
+        content: "";
+        background-image: url(../../Assets/Img-page-habitat-jungle/jungle.jpg); // je l'ai fait comme ca -> (../../), car le main.css est dans un autre dossier (css)
+        background-position: center;
+        background-size: cover;
+        height: 100%; 
+        width: 100%;
+        filter: opacity(0.5)  drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+         background-attachment: fixed;   //Pour créer l'effet parallax,  Pour le moment, je le laisse comment commentaire
+    }
+
+    // La description de l'habitat
+    .big-titre-content{
+        position: relative;
+        height: 100%;
+        //On le met qu millieu 
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: 0.5s ease; // transition au moment d'ouvir le menu burger  
+            // on position l'image et le text =
+            .container-img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @media (max-width : "768px"){ //Pour tablet
+                    display: none; // on enlève l'image car il n'y a pas assez de la place 
+                }
+            }
+            //style du titre de l'habitat
+            h2{
+                text-transform: uppercase;
+                color: white;
+                text-align: center;           
+                @media (max-width : "1024px"){ //laptop
+                    font-size: 2rem !important;
+                }
+                @media (max-width : "431px"){ // mobile
+                    font-size: 1.3rem !important;
+                }
+            }
+            //style de la description de l'habitat
+            p{
+                color: white;
+                font-size: 1.4rem !important;
+                font-weight: 300;
+                @media (max-width : "1024px"){ //laptop
+                    font-size: 0.9rem !important;
+                }
+                @media (max-width : "431px"){ // mobile
+                    font-size: 0.7rem !important;
+                }
+            }
+        }
+        //Style de l'image
+        .img-big-titre{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            padding: 10px; //je met un petit border à l'image
+            background-color: $info;
+            @media (max-width : "1024px"){ //Pour Laptop
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+}  
+// classe pour bouger à gauche la description de l'habitat en cliquant sur le menu burger
+.move-left{
+    width: 600px !important;
+    left: 40% !important;
+    @media (max-width : "431px"){ // mobile
+        width: 295px !important;
     }
 }

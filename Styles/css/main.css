@@ -12465,6 +12465,7 @@ section {
   height: 100%;
   width: 100%;
   filter: opacity(0.5) drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+  background-attachment: fixed;
 }
 .big-titre-savane-habitat .big-titre-content {
   position: relative;
@@ -12624,5 +12625,114 @@ section {
   .savane-animals p {
     font-size: 0.9rem;
     bottom: 3%;
+  }
+}
+
+.big-titre-jungle-habitat {
+  position: relative;
+  background-color: black;
+  width: 100%;
+  height: 700px;
+}
+@media (max-width: 1024px) {
+  .big-titre-jungle-habitat {
+    height: 380px;
+  }
+}
+@media (max-width: 768px) {
+  .big-titre-jungle-habitat {
+    height: 350px;
+  }
+}
+@media (max-width: 431px) {
+  .big-titre-jungle-habitat {
+    height: 300px;
+  }
+}
+.big-titre-jungle-habitat::before {
+  position: absolute;
+  content: "";
+  background-image: url(../../Assets/Img-page-habitat-jungle/jungle.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  filter: opacity(0.5) drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+  background-attachment: fixed;
+}
+.big-titre-jungle-habitat .big-titre-content {
+  position: relative;
+  height: 100%;
+}
+.big-titre-jungle-habitat .big-titre-content .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease;
+}
+.big-titre-jungle-habitat .big-titre-content .container .container-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .big-titre-jungle-habitat .big-titre-content .container .container-img {
+    display: none;
+  }
+}
+.big-titre-jungle-habitat .big-titre-content .container h2, .big-titre-jungle-habitat .big-titre-content .container .h2 {
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .big-titre-jungle-habitat .big-titre-content .container h2, .big-titre-jungle-habitat .big-titre-content .container .h2 {
+    font-size: 2rem !important;
+  }
+}
+@media (max-width: 431px) {
+  .big-titre-jungle-habitat .big-titre-content .container h2, .big-titre-jungle-habitat .big-titre-content .container .h2 {
+    font-size: 1.3rem !important;
+  }
+}
+.big-titre-jungle-habitat .big-titre-content .container p {
+  color: white;
+  font-size: 1.4rem !important;
+  font-weight: 300;
+}
+@media (max-width: 1024px) {
+  .big-titre-jungle-habitat .big-titre-content .container p {
+    font-size: 0.9rem !important;
+  }
+}
+@media (max-width: 431px) {
+  .big-titre-jungle-habitat .big-titre-content .container p {
+    font-size: 0.7rem !important;
+  }
+}
+.big-titre-jungle-habitat .big-titre-content .img-big-titre {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 10px;
+  background-color: #7B5E2F;
+}
+@media (max-width: 1024px) {
+  .big-titre-jungle-habitat .big-titre-content .img-big-titre {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.move-left {
+  width: 600px !important;
+  left: 40% !important;
+}
+@media (max-width: 431px) {
+  .move-left {
+    width: 295px !important;
   }
 }/*# sourceMappingURL=main.css.map */
