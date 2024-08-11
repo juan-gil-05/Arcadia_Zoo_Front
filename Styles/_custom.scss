@@ -408,13 +408,13 @@ section{
     width: 100%;
     height: 550px;
     // Media queries pour ajuster l'hauteur de l'image et le text
-    @media (max-width : "1024px"){ // pour laptop, et tablet
+    @media (max-width : 1024px){ // pour laptop, et tablet
         height: 380px;
     }
-    @media (max-width : "768px"){ // Pour Tablet
+    @media (max-width : 768px){ // Pour Tablet
         height: 320px;
     }
-    @media (max-width : "431px"){ // Pour mobile
+    @media (max-width : 431px){ // Pour mobile
         height: 170px;
         .big-titre-content h2{
             font-size: 0.85rem !important;
@@ -426,7 +426,7 @@ section{
         content: "";
         background-image: url(../../Assets/Img-page-habitats/img_big-titre.jpg); // je l'ai fait comme ca -> (../../), car le main.css est dans un autre dossier (css)
         background-position: 11px -57px;
-        @media (max-width : "768px"){ // Pour tablet
+        @media (max-width : 768px){ // Pour tablet
             background-position: 0px -15px;
         }
         background-size: cover;
@@ -442,18 +442,17 @@ section{
             width: 45%;
             font-size: 3.5rem !important;
 
-            @media (max-width : "1024px"){ // Pour laptop
+            @media (max-width : 1024px){ // Pour laptop
                 font-size: 2.5rem !important;
             }
-            @media (max-width : "768px"){ // Pour Tablet
+            @media (max-width : 768px){ // Pour Tablet
                 font-size: 2rem !important;
             }
-            @media (max-width : "431px"){ // Pour mobile
+            @media (max-width : 431px){ // Pour mobile
                 font-size: 1.2rem !important;
             }
     }
 }
-
 //SECTION DE TOUS LES HABITATS DU ZOO
 .img-container{
     //Les habitats avec ces images
@@ -484,119 +483,38 @@ section{
         background-color: $info;
         border-radius: 0 15px 15px 0;
 
-        @media (max-width : "768px"){ // Pour tablet
+        @media (max-width : 768px){ // Pour tablet
             font-size: 1rem !important;
         }
-        @media (max-width : "431px"){// Pour mobile
+        @media (max-width : 431px){// Pour mobile
             font-size: 0.8rem !important;
         }
     }
 }
 
 //-----------------------------------------------------------------------------------------------------------------
-//SECTION DU BIG TITLE SUR LA PAGE HABITAT DE LA SAVANE
-.big-titre-savane-habitat{
+//STYLE POUR LES PAGES DES HABITATS
+
+//SECTION DU BIG TITLE DE L'HABITAT
+.big-titre-specifique-habitat{
     // Taille du conteneur qui aura l'image
     position: relative;
     background-color: black;
     width: 100%;
-    height: 700px;
-    // Media queries pour ajuster l'hauteur de l'image et le text
-    @media (max-width : "1024px"){ // pour laptop
-        height: 380px;
-    }
-    @media (max-width : "768px"){ // Pour Tablet
-        height: 350px;
-    }
-    @media (max-width : "431px"){ // Pour mobile
-        height: 300px;
-    }
+    height: 100vh;
+    overflow: hidden;
 
-    //Ajout de l'image
-    &::before{
+    //Style de l'image du fond
+    .backgroung-img-habitats{
         position: absolute;
-        content: "";
-        background-image: url(../../Assets/Img-page-habitats/savane.jpg); // je l'ai fait comme ca -> (../../), car le main.css est dans un autre dossier (css)
-        background-position: center;
-        background-size: cover;
+        object-fit: cover;
         height: 100%; 
         width: 100%;
         filter: opacity(0.5)  drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
-         background-attachment: fixed;   //Pour créer l'effet parallax,  Pour le moment, je le laisse comment commentaire
     }
-
-    // La description de l'habitat
-    .big-titre-content{
-        position: relative;
-        height: 100%;
-        //On le met qu millieu 
-        .container{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            transition: 0.5s ease; // transition au moment d'ouvir le menu burger  
-            // on position l'image et le text =
-            .container-img{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                @media (max-width : "768px"){ //Pour tablet
-                    display: none; // on enlève l'image car il n'y a pas assez de la place 
-                }
-            }
-            //style du titre de l'habitat
-            h2{
-                text-transform: uppercase;
-                color: white;
-                text-align: center;           
-                @media (max-width : "1024px"){ //laptop
-                    font-size: 2rem !important;
-                }
-                @media (max-width : "431px"){ // mobile
-                    font-size: 1.3rem !important;
-                }
-            }
-            //style de la description de l'habitat
-            p{
-                color: white;
-                font-size: 1.4rem !important;
-                font-weight: 300;
-                @media (max-width : "1024px"){ //laptop
-                    font-size: 0.9rem !important;
-                }
-                @media (max-width : "431px"){ // mobile
-                    font-size: 0.7rem !important;
-                }
-            }
-        }
-        //Style de l'image
-        .img-big-titre{
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            object-fit: cover;
-            padding: 10px; //je met un petit border à l'image
-            background-color: $info;
-            @media (max-width : "1024px"){ //Pour Laptop
-                width: 200px;
-                height: 200px;
-            }
-        }
-    }
-}  
-// classe pour bouger à gauche la description de l'habitat en cliquant sur le menu burger
-.move-left{
-    width: 600px !important;
-    left: 40% !important;
-    @media (max-width : "431px"){ // mobile
-        width: 330px !important;
-    }
-}
-
-//--------------------------------------------------------------------------------------------------------------------
-//SECTION DES ANIMAUX DE LA SAVANE
-.savane-animals{
+} 
+//SECTION DES ANIMAUX DANS LES HABITATS
+.habitat-animals{
     //Style du titre
     h2{
         text-align: center;
@@ -608,44 +526,27 @@ section{
         width: 100%;
         cursor: default;
     }
-    // animation pour faire apparaitre les image quand on scroll
-    @keyframes show{
-        from{
-            opacity: 0;
-            scale: 25%;
-        }
-
-        to{
-            opacity: 1;
-            scale: 100%;
-        }
-    }
     //style des images
     img{
-        //animation des images
-        view-timeline-name: --image;
-        view-timeline-axis: block;
-        animation-timeline: --image;
-        animation-name: show;
-        animation-range: entry 25% cover 30%;
-        animation-fill-mode: both;
-
         width: 100%;
         height: 300px;
         border-radius: 50%;
         object-fit: cover;
         cursor: pointer;
-        @media (max-width : "1024px"){ //laptop
+        transition: 0.3s ease;
+        @media (max-width : 1024px){ //laptop
             height: 200px;
         }
-        @media (max-width : "431px"){ //mobile
+        @media (max-width : 431px){ //mobile
             height: 120px;
         }
     }
-    //style des certaines images
-    .lion-img{
-        transform: scaleX(-1);
+
+    img:hover{
+        border-radius: 25%;
+        transform: scale(1.1);
     }
+    //style des certaines images
     .elephant-img{
         object-position: top;
     }
@@ -657,7 +558,7 @@ section{
         justify-content: center;
         margin-top: 30px;
         position: relative;
-        @media (max-width : "431px"){ //mobile
+        @media (max-width : 431px){ //mobile
             margin-top: 15px; 
         }
     }
@@ -667,188 +568,86 @@ section{
         color: white;
         font-size: 2rem;
         bottom: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         cursor: pointer;
-        @media (max-width : "1024px"){ //laptop
+        @media (max-width : 1024px){ //laptop
             font-size: 1.5rem;
         }
-        @media (max-width : "431px"){ //mobile
+        @media (max-width : 431px){ //mobile
             font-size: 0.9rem;
             bottom: 3%;
         }
     }
 }
-
-//------------------------------------------------------------------------------------------------------------
-//SECTION DU BIG TITLE SUR LA PAGE HABITAT DE LA JUNGLE
-.big-titre-jungle-habitat{
-    // Taille du conteneur qui aura l'image
+// La description de l'habitat
+.big-titre-content{
     position: relative;
-    background-color: black;
-    width: 100%;
-    height: 700px;
-    // Media queries pour ajuster l'hauteur de l'image et le text
-    @media (max-width : "1024px"){ // pour laptop
-        height: 380px;
-    }
-    @media (max-width : "768px"){ // Pour Tablet
-        height: 350px;
-    }
-    @media (max-width : "431px"){ // Pour mobile
-        height: 300px;
-    }
-
-    //Ajout de l'image
-    &::before{
+    height: 100%;
+    //On le met qu millieu 
+    .container{
         position: absolute;
-        content: "";
-        background-image: url(../../Assets/Img-page-habitat-jungle/jungle.jpg); // je l'ai fait comme ca -> (../../), car le main.css est dans un autre dossier (css)
-        background-position: center;
-        background-size: cover;
-        height: 100%; 
-        width: 100%;
-        filter: opacity(0.5)  drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
-         background-attachment: fixed;   //Pour créer l'effet parallax,  Pour le moment, je le laisse comment commentaire
-    }
-
-    // La description de l'habitat
-    .big-titre-content{
-        position: relative;
-        height: 100%;
-        //On le met qu millieu 
-        .container{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            transition: 0.5s ease; // transition au moment d'ouvir le menu burger  
-            // on position l'image et le text =
-            .container-img{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                @media (max-width : "768px"){ //Pour tablet
-                    display: none; // on enlève l'image car il n'y a pas assez de la place 
-                }
-            }
-            //style du titre de l'habitat
-            h2{
-                text-transform: uppercase;
-                color: white;
-                text-align: center;           
-                @media (max-width : "1024px"){ //laptop
-                    font-size: 2rem !important;
-                }
-                @media (max-width : "431px"){ // mobile
-                    font-size: 1.3rem !important;
-                }
-            }
-            //style de la description de l'habitat
-            p{
-                color: white;
-                font-size: 1.4rem !important;
-                font-weight: 300;
-                @media (max-width : "1024px"){ //laptop
-                    font-size: 0.9rem !important;
-                }
-                @media (max-width : "431px"){ // mobile
-                    font-size: 0.7rem !important;
-                }
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.5s ease; // transition au moment d'ouvir le menu burger  
+        // on position l'image et le text =
+        .container-img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media (max-width : "768px"){ //Pour tablet
+                display: none; // on enlève l'image car il n'y a pas assez de la place 
             }
         }
-        //Style de l'image
-        .img-big-titre{
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            object-fit: cover;
-            padding: 10px; //je met un petit border à l'image
-            background-color: $info;
-            @media (max-width : "1024px"){ //Pour Laptop
-                width: 200px;
-                height: 200px;
+        //style du titre de l'habitat
+        h2{
+            text-transform: uppercase;
+            color: white;
+            text-align: center;           
+            @media (max-width : "1024px"){ //laptop
+                font-size: 2rem !important;
+            }
+            @media (max-width : "431px"){ // mobile
+                font-size: 1.3rem !important;
+            }
+        }
+        //style de la description de l'habitat
+        p{
+            color: white;
+            font-size: 1.4rem !important;
+            font-weight: 300;
+            @media (max-width : "1024px"){ //laptop
+                font-size: 0.9rem !important;
+            }
+            @media (max-width : "431px"){ // mobile
+                font-size: 0.7rem !important;
             }
         }
     }
-}  
+    //Style de l'image
+    .img-big-titre{
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        padding: 10px; //je met un petit border à l'image
+        background-color: $info;
+        transition: 0.3s;
+        @media (max-width : "1024px"){ //Pour Laptop
+            width: 200px;
+            height: 200px;
+        }
+    }
+    .img-big-titre:hover{
+        transform: scale(1.1);
+        }
+}
 // classe pour bouger à gauche la description de l'habitat en cliquant sur le menu burger
 .move-left{
     width: 600px !important;
     left: 40% !important;
     @media (max-width : "431px"){ // mobile
-        width: 295px !important;
-    }
-}
-
-//-----------------------------------------------------------------------------------------------------------
-//SECTION DES ANIMAUX DE LA JUNGLE
-.jungle-animals{
-    //Style du titre
-    h2{
-        text-align: center;
-        color: white;
-        text-transform: uppercase;
-    }
-    //Style des liens dans les images
-    a{
-        width: 100%;
-        cursor: default;
-    }
-    // animation pour faire apparaitre les image quand on scroll
-    @keyframes show{
-        from{
-            opacity: 0;
-            scale: 25%;
-        }
-
-        to{
-            opacity: 1;
-            scale: 100%;
-        }
-    }
-    //style des images
-    img{
-        //animation des images
-        view-timeline-name: --image;
-        view-timeline-axis: block;
-        animation-timeline: --image;
-        animation-name: show;
-        animation-range: entry 25% cover 30%;
-        animation-fill-mode: both;
-
-        width: 100%;
-        height: 300px;
-        border-radius: 50%;
-        object-fit: cover;
-        cursor: pointer;
-        @media (max-width : "1024px"){ //laptop
-            height: 200px;
-        }
-        @media (max-width : "431px"){ //mobile
-            height: 120px;
-        }
-    }
-    .col{ // je met les images bien au millieu
-        display: flex;
-        justify-content: center;
-        margin-top: 30px;
-        position: relative;
-        @media (max-width : "431px"){ //mobile
-            margin-top: 15px; 
-        }
-    }
-
-    p{  // je position les nom des animaux 
-        position: absolute;
-        color: white;
-        font-size: 2rem;
-        bottom: 5%;
-        cursor: pointer;
-        @media (max-width : "1024px"){ //laptop
-            font-size: 1.5rem;
-        }
-        @media (max-width : "431px"){ //mobile
-            font-size: 0.9rem;
-            bottom: 3%;
-        }
+        width: 330px !important;
     }
 }

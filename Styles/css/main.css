@@ -12435,90 +12435,146 @@ section {
   }
 }
 
-.big-titre-savane-habitat {
+.big-titre-specifique-habitat {
   position: relative;
   background-color: black;
   width: 100%;
-  height: 700px;
+  height: 100vh;
+  overflow: hidden;
 }
-@media (max-width: 1024px) {
-  .big-titre-savane-habitat {
-    height: 380px;
-  }
-}
-@media (max-width: 768px) {
-  .big-titre-savane-habitat {
-    height: 350px;
-  }
-}
-@media (max-width: 431px) {
-  .big-titre-savane-habitat {
-    height: 300px;
-  }
-}
-.big-titre-savane-habitat::before {
+.big-titre-specifique-habitat .backgroung-img-habitats {
   position: absolute;
-  content: "";
-  background-image: url(../../Assets/Img-page-habitats/savane.jpg);
-  background-position: center;
-  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
   width: 100%;
   filter: opacity(0.5) drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
-  background-attachment: fixed;
 }
-.big-titre-savane-habitat .big-titre-content {
+
+.habitat-animals h2, .habitat-animals .h2 {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+.habitat-animals a {
+  width: 100%;
+  cursor: default;
+}
+.habitat-animals img {
+  width: 100%;
+  height: 300px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+@media (max-width: 1024px) {
+  .habitat-animals img {
+    height: 200px;
+  }
+}
+@media (max-width: 431px) {
+  .habitat-animals img {
+    height: 120px;
+  }
+}
+.habitat-animals img:hover {
+  border-radius: 25%;
+  transform: scale(1.1);
+}
+.habitat-animals .elephant-img {
+  -o-object-position: top;
+     object-position: top;
+}
+.habitat-animals .hippopotame-img {
+  -o-object-position: right;
+     object-position: right;
+}
+.habitat-animals .col {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  position: relative;
+}
+@media (max-width: 431px) {
+  .habitat-animals .col {
+    margin-top: 15px;
+  }
+}
+.habitat-animals p {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .habitat-animals p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 431px) {
+  .habitat-animals p {
+    font-size: 0.9rem;
+    bottom: 3%;
+  }
+}
+
+.big-titre-content {
   position: relative;
   height: 100%;
 }
-.big-titre-savane-habitat .big-titre-content .container {
+.big-titre-content .container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 0.5s ease;
 }
-.big-titre-savane-habitat .big-titre-content .container .container-img {
+.big-titre-content .container .container-img {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 @media (max-width: 768px) {
-  .big-titre-savane-habitat .big-titre-content .container .container-img {
+  .big-titre-content .container .container-img {
     display: none;
   }
 }
-.big-titre-savane-habitat .big-titre-content .container h2, .big-titre-savane-habitat .big-titre-content .container .h2 {
+.big-titre-content .container h2, .big-titre-content .container .h2 {
   text-transform: uppercase;
   color: white;
   text-align: center;
 }
 @media (max-width: 1024px) {
-  .big-titre-savane-habitat .big-titre-content .container h2, .big-titre-savane-habitat .big-titre-content .container .h2 {
+  .big-titre-content .container h2, .big-titre-content .container .h2 {
     font-size: 2rem !important;
   }
 }
 @media (max-width: 431px) {
-  .big-titre-savane-habitat .big-titre-content .container h2, .big-titre-savane-habitat .big-titre-content .container .h2 {
+  .big-titre-content .container h2, .big-titre-content .container .h2 {
     font-size: 1.3rem !important;
   }
 }
-.big-titre-savane-habitat .big-titre-content .container p {
+.big-titre-content .container p {
   color: white;
   font-size: 1.4rem !important;
   font-weight: 300;
 }
 @media (max-width: 1024px) {
-  .big-titre-savane-habitat .big-titre-content .container p {
+  .big-titre-content .container p {
     font-size: 0.9rem !important;
   }
 }
 @media (max-width: 431px) {
-  .big-titre-savane-habitat .big-titre-content .container p {
+  .big-titre-content .container p {
     font-size: 0.7rem !important;
   }
 }
-.big-titre-savane-habitat .big-titre-content .img-big-titre {
+.big-titre-content .img-big-titre {
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -12526,12 +12582,16 @@ section {
      object-fit: cover;
   padding: 10px;
   background-color: #7B5E2F;
+  transition: 0.3s;
 }
 @media (max-width: 1024px) {
-  .big-titre-savane-habitat .big-titre-content .img-big-titre {
+  .big-titre-content .img-big-titre {
     width: 200px;
     height: 200px;
   }
+}
+.big-titre-content .img-big-titre:hover {
+  transform: scale(1.1);
 }
 
 .move-left {
@@ -12541,271 +12601,5 @@ section {
 @media (max-width: 431px) {
   .move-left {
     width: 330px !important;
-  }
-}
-
-.savane-animals h2, .savane-animals .h2 {
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
-}
-.savane-animals a {
-  width: 100%;
-  cursor: default;
-}
-@keyframes show {
-  from {
-    opacity: 0;
-    scale: 25%;
-  }
-  to {
-    opacity: 1;
-    scale: 100%;
-  }
-}
-.savane-animals img {
-  view-timeline-name: --image;
-  view-timeline-axis: block;
-  animation-timeline: --image;
-  animation-name: show;
-  animation-range: entry 25% cover 30%;
-  animation-fill-mode: both;
-  width: 100%;
-  height: 300px;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  cursor: pointer;
-}
-@media (max-width: 1024px) {
-  .savane-animals img {
-    height: 200px;
-  }
-}
-@media (max-width: 431px) {
-  .savane-animals img {
-    height: 120px;
-  }
-}
-.savane-animals .lion-img {
-  transform: scaleX(-1);
-}
-.savane-animals .elephant-img {
-  -o-object-position: top;
-     object-position: top;
-}
-.savane-animals .hippopotame-img {
-  -o-object-position: right;
-     object-position: right;
-}
-.savane-animals .col {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-  position: relative;
-}
-@media (max-width: 431px) {
-  .savane-animals .col {
-    margin-top: 15px;
-  }
-}
-.savane-animals p {
-  position: absolute;
-  color: white;
-  font-size: 2rem;
-  bottom: 5%;
-  cursor: pointer;
-}
-@media (max-width: 1024px) {
-  .savane-animals p {
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 431px) {
-  .savane-animals p {
-    font-size: 0.9rem;
-    bottom: 3%;
-  }
-}
-
-.big-titre-jungle-habitat {
-  position: relative;
-  background-color: black;
-  width: 100%;
-  height: 700px;
-}
-@media (max-width: 1024px) {
-  .big-titre-jungle-habitat {
-    height: 380px;
-  }
-}
-@media (max-width: 768px) {
-  .big-titre-jungle-habitat {
-    height: 350px;
-  }
-}
-@media (max-width: 431px) {
-  .big-titre-jungle-habitat {
-    height: 300px;
-  }
-}
-.big-titre-jungle-habitat::before {
-  position: absolute;
-  content: "";
-  background-image: url(../../Assets/Img-page-habitat-jungle/jungle.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  filter: opacity(0.5) drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
-  background-attachment: fixed;
-}
-.big-titre-jungle-habitat .big-titre-content {
-  position: relative;
-  height: 100%;
-}
-.big-titre-jungle-habitat .big-titre-content .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.5s ease;
-}
-.big-titre-jungle-habitat .big-titre-content .container .container-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media (max-width: 768px) {
-  .big-titre-jungle-habitat .big-titre-content .container .container-img {
-    display: none;
-  }
-}
-.big-titre-jungle-habitat .big-titre-content .container h2, .big-titre-jungle-habitat .big-titre-content .container .h2 {
-  text-transform: uppercase;
-  color: white;
-  text-align: center;
-}
-@media (max-width: 1024px) {
-  .big-titre-jungle-habitat .big-titre-content .container h2, .big-titre-jungle-habitat .big-titre-content .container .h2 {
-    font-size: 2rem !important;
-  }
-}
-@media (max-width: 431px) {
-  .big-titre-jungle-habitat .big-titre-content .container h2, .big-titre-jungle-habitat .big-titre-content .container .h2 {
-    font-size: 1.3rem !important;
-  }
-}
-.big-titre-jungle-habitat .big-titre-content .container p {
-  color: white;
-  font-size: 1.4rem !important;
-  font-weight: 300;
-}
-@media (max-width: 1024px) {
-  .big-titre-jungle-habitat .big-titre-content .container p {
-    font-size: 0.9rem !important;
-  }
-}
-@media (max-width: 431px) {
-  .big-titre-jungle-habitat .big-titre-content .container p {
-    font-size: 0.7rem !important;
-  }
-}
-.big-titre-jungle-habitat .big-titre-content .img-big-titre {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  padding: 10px;
-  background-color: #7B5E2F;
-}
-@media (max-width: 1024px) {
-  .big-titre-jungle-habitat .big-titre-content .img-big-titre {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-.move-left {
-  width: 600px !important;
-  left: 40% !important;
-}
-@media (max-width: 431px) {
-  .move-left {
-    width: 295px !important;
-  }
-}
-
-.jungle-animals h2, .jungle-animals .h2 {
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
-}
-.jungle-animals a {
-  width: 100%;
-  cursor: default;
-}
-@keyframes show {
-  from {
-    opacity: 0;
-    scale: 25%;
-  }
-  to {
-    opacity: 1;
-    scale: 100%;
-  }
-}
-.jungle-animals img {
-  view-timeline-name: --image;
-  view-timeline-axis: block;
-  animation-timeline: --image;
-  animation-name: show;
-  animation-range: entry 25% cover 30%;
-  animation-fill-mode: both;
-  width: 100%;
-  height: 300px;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  cursor: pointer;
-}
-@media (max-width: 1024px) {
-  .jungle-animals img {
-    height: 200px;
-  }
-}
-@media (max-width: 431px) {
-  .jungle-animals img {
-    height: 120px;
-  }
-}
-.jungle-animals .col {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-  position: relative;
-}
-@media (max-width: 431px) {
-  .jungle-animals .col {
-    margin-top: 15px;
-  }
-}
-.jungle-animals p {
-  position: absolute;
-  color: white;
-  font-size: 2rem;
-  bottom: 5%;
-  cursor: pointer;
-}
-@media (max-width: 1024px) {
-  .jungle-animals p {
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 431px) {
-  .jungle-animals p {
-    font-size: 0.9rem;
-    bottom: 3%;
   }
 }/*# sourceMappingURL=main.css.map */
