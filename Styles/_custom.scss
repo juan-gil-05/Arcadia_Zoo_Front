@@ -230,7 +230,7 @@ footer p.ligne{
     &::before{
         position: absolute;
         content: "";
-        background-image: url(../../Assets/img-page-accueil/image_Bienvenue.jpg); // je l'ai fait comme ca -> (../../), car le main.css est dans un autre dossier (css)
+        background-image: url(../../Assets/img-page-accueil/image_Bienvenue.webp); // je l'ai fait comme ca -> (../../), car le main.css est dans un autre dossier (css)
         background-position: left;
         background-size: cover;
         height: 100%; 
@@ -424,7 +424,7 @@ section{
     &::before{
         position: absolute;
         content: "";
-        background-image: url(../../Assets/Img-page-habitats/img_big-titre.jpg); // je l'ai fait comme ca -> (../../), car le main.css est dans un autre dossier (css)
+        background-image: url(../../Assets/Img-page-habitats/img_big-titre.webp); // je l'ai fait comme ca -> (../../), car le main.css est dans un autre dossier (css)
         background-position: 11px -57px;
         @media (max-width : 768px){ // Pour tablet
             background-position: 0px -15px;

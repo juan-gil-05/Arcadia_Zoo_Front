@@ -12167,7 +12167,7 @@ footer p.ligne {
 .big-titre-accueil::before {
   position: absolute;
   content: "";
-  background-image: url(../../Assets/img-page-accueil/image_Bienvenue.jpg);
+  background-image: url(../../Assets/img-page-accueil/image_Bienvenue.webp);
   background-position: left;
   background-size: cover;
   height: 100%;
@@ -12363,7 +12363,7 @@ section {
 .big-titre-habitats::before {
   position: absolute;
   content: "";
-  background-image: url(../../Assets/Img-page-habitats/img_big-titre.jpg);
+  background-image: url(../../Assets/Img-page-habitats/img_big-titre.webp);
   background-position: 11px -57px;
   background-size: cover;
   height: 100%;
