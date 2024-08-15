@@ -12451,78 +12451,6 @@ section {
   filter: opacity(0.5) drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
 }
 
-.habitat-animals h2, .habitat-animals .h2 {
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
-}
-.habitat-animals a {
-  width: 100%;
-  cursor: default;
-}
-.habitat-animals img {
-  width: 100%;
-  height: 300px;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-@media (max-width: 1024px) {
-  .habitat-animals img {
-    height: 200px;
-  }
-}
-@media (max-width: 431px) {
-  .habitat-animals img {
-    height: 120px;
-  }
-}
-.habitat-animals img:hover {
-  border-radius: 25%;
-  transform: scale(1.1);
-}
-.habitat-animals .elephant-img {
-  -o-object-position: top;
-     object-position: top;
-}
-.habitat-animals .hippopotame-img {
-  -o-object-position: right;
-     object-position: right;
-}
-.habitat-animals .col {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-  position: relative;
-}
-@media (max-width: 431px) {
-  .habitat-animals .col {
-    margin-top: 15px;
-  }
-}
-.habitat-animals p {
-  position: absolute;
-  color: white;
-  font-size: 2rem;
-  bottom: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-}
-@media (max-width: 1024px) {
-  .habitat-animals p {
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 431px) {
-  .habitat-animals p {
-    font-size: 0.9rem;
-    bottom: 3%;
-  }
-}
-
 .big-titre-content {
   position: relative;
   height: 100%;
@@ -12594,12 +12522,80 @@ section {
   transform: scale(1.1);
 }
 
+.habitat-animals h2, .habitat-animals .h2 {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+.habitat-animals a {
+  width: 100%;
+  cursor: default;
+}
+.habitat-animals img {
+  width: 100%;
+  height: 300px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+@media (max-width: 1024px) {
+  .habitat-animals img {
+    height: 200px;
+  }
+}
+@media (max-width: 431px) {
+  .habitat-animals img {
+    height: 120px;
+  }
+}
+.habitat-animals img:hover {
+  border-radius: 25%;
+  transform: scale(1.1);
+}
+.habitat-animals .elephant-img {
+  -o-object-position: top;
+     object-position: top;
+}
+.habitat-animals .hippopotame-img {
+  -o-object-position: right;
+     object-position: right;
+}
+.habitat-animals .col {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  position: relative;
+}
+@media (max-width: 431px) {
+  .habitat-animals .col {
+    margin-top: 15px;
+  }
+}
+.habitat-animals p {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  white-space: nowrap;
+}
+@media (max-width: 1024px) {
+  .habitat-animals p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 431px) {
+  .habitat-animals p {
+    font-size: 0.9rem;
+    bottom: 3%;
+  }
+}
+
 .move-left {
   width: 600px !important;
   left: 40% !important;
-}
-@media (max-width: 431px) {
-  .move-left {
-    width: 330px !important;
-  }
 }/*# sourceMappingURL=main.css.map */
