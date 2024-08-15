@@ -1,0 +1,57 @@
+// j'ai modifié le HTML pour que le footer puisse se mettre en bas de la page
+html{
+    position: relative; 
+    min-height: 100%;
+}
+// je met le footer en bas de la page
+footer.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 12px 5px;
+}
+//pour que le main ne sois pas cache pour le footer 
+main{
+    margin-bottom: 240px;
+    //pour laptop l
+    @media (min-width : "1440px"){
+        margin-bottom: 260px;
+    }
+    //pour tablet
+    @media (min-width : "768px"){
+        margin-bottom: 300px;
+    }
+    //pour les mobiles
+    @media (max-width : "431px"){
+        margin-bottom: 175px;
+    }
+}
+// Ajout d'une ligne sur le text du copyright
+.ligne{
+    position: relative;
+    margin-top: 10px;
+    left: -15px;
+    margin-right: -27px;
+}
+.ligne::before{
+    display: block;
+    position: absolute;
+    content: "";
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+}
+footer p{
+    margin-bottom: 0.5rem;
+}
+//modification des icons du footer
+.icon-footer{
+    fill: $info;
+    padding: 0px 2px 2px 0px;
+}
+//Ajout du padding au text du copyright
+footer p.ligne{
+    padding-right: 15px;
+    margin-bottom: 0px;
+}
