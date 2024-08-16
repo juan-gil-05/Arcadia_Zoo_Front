@@ -15,6 +15,10 @@ $btn-font-weight: 600; // épaisseur du text des boutons
     font-size: 3rem !important;
     font-weight: 800;
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+
+    @media (max-width : 1024px){ //laptop
+        font-size: 2rem !important;
+    }
 }
 //style du text des sous-titres
 .subtitle-text{
@@ -22,12 +26,20 @@ $btn-font-weight: 600; // épaisseur du text des boutons
     font-size: 2.5rem !important;
     font-weight: 600;
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+
+    @media (max-width : 1024px){ //laptop
+        font-size: 1.9rem !important;
+    }
 }
 //style du text du contenu
 .content-text { 
     font-family: $font-family-serif;
     font-size: 1.5rem !important;
     font-weight: 600;
+
+    @media (max-width : 1024px){ //laptop
+        font-size: 1.3rem !important;
+    }
 }
 //style du petit text 
 .small-text{
@@ -38,11 +50,20 @@ $btn-font-weight: 600; // épaisseur du text des boutons
 // ombre du text
 .text-shadow {text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);} 
 
-
+//ombre pour les sections
+.section-shadow{
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2); // je met une petite ombre dans toutes les section
+}
 //Style des liens
 .link{
     color: $info;
     text-decoration: none;
+}
+
+//Style des boutons
+.btn{
+    white-space: nowrap;
+    font-size: 0.9rem !important;
 }
 
 .text-justify{
@@ -82,11 +103,8 @@ $btn-font-weight: 600; // épaisseur du text des boutons
 //Media Queries pour tablet
 @media (min-width : "768px") and (max-width : "1023px"){
     // taille des bouton
-    .btn{
-        --bs-btn-font-size: 0.8rem !important; 
-    }
     .subtitle-text{
-        font-size: 1.8rem !important;
+        font-size: 1.7rem !important;
     }
 }
 

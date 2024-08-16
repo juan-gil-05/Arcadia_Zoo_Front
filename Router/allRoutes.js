@@ -2,6 +2,7 @@ import Route from "./Route.js";
 
 //Définir ici vos routes
 export const allRoutes = [
+    new Route("/Index.html", "Accueil", "/pages/home.html"),
     new Route("/accueil", "Accueil", "/pages/home.html"),
     new Route("/habitats", "Les Habitats", "/pages/vue_global_habitats.html"),
     new Route("/habitats-savane", "La Savane", "/pages/Habitats/habitat_savane.html"),

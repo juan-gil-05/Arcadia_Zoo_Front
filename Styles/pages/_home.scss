@@ -37,9 +37,6 @@
 }
 
 //SECTION DES HABITATS - PAGE D'ACCUEIL
-section{
-    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2); // je met une petite ombre dans toutes les section
-}
 .container-img-habitats{
     //hauteur du conteneur qui a les images
     height: 600px;
@@ -182,5 +179,7 @@ section{
     .link { // je met le lien au milieu 
         transform: translateX(-50%);
         margin-left: 50%;
+        font-size: 1.2rem;
+        white-space: nowrap;
     }
 }
