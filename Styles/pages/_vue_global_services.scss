@@ -1,5 +1,5 @@
-//SECTION DU BIG TITLE SUR LA PAGE DE TOUS LES HABITATS
-.big-titre-habitats{
+//SECTION DU BIG TITLE SUR LA PAGE DE TOUS LES SERVICES
+.big-titre-services{
     // Taille du conteneur qui aura l'image
     position: relative;
     background-color: black;
@@ -23,10 +23,10 @@
     &::before{
         position: absolute;
         content: "";
-        background-image: url(../../Assets/Img-page-habitats/img_big-titre.webp); // je l'ai fait comme ca -> (../../), car le main.css est dans un autre dossier (css)
-        background-position: 11px -57px;
+        background-image: url(../../Assets/Img-page-services/services-titre.webp); // je l'ai fait comme ca -> (../../), car le main.css est dans un autre dossier (css)
+        background-position: 40px -71px;
         @media (max-width : 768px){ // Pour tablet
-            background-position: 0px -15px;
+            background-position: 23px -18px;
         }
         background-size: cover;
         height: 100%; 
@@ -50,43 +50,5 @@
             @media (max-width : 431px){ // Pour mobile
                 font-size: 1.2rem !important;
             }
-    }
-}
-//SECTION DE TOUS LES HABITATS DU ZOO
-.img-container{
-    //Les habitats avec ces images
-    position: relative;
-    padding-top: 15px;
-    //animation pour zoomer l'image
-    transition: 0.4s;
-    &:hover{
-        transform: scale(1.03);
-    }
-    //images des habitats
-    .img-habitat{
-        cursor: pointer;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        filter: drop-shadow(2px 4px 5px rgb(30, 30, 30)); //ombre
-        border-radius: 5%;
-    }
-    //les noms des habitats
-    .name-habitat{
-        cursor: pointer;
-        position: absolute;
-        text-transform: uppercase;
-        bottom: 10%;
-        color: white;
-        padding: 5px 15% 5px 10px; // Pour que le text sois dans une "boite"
-        background-color: $info;
-        border-radius: 0 15px 15px 0;
-
-        @media (max-width : 768px){ // Pour tablet
-            font-size: 1rem !important;
-        }
-        @media (max-width : 431px){// Pour mobile
-            font-size: 0.8rem !important;
-        }
     }
 }

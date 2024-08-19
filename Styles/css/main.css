@@ -12360,6 +12360,7 @@ footer p.ligne {
   background-color: black;
   width: 100%;
   height: 550px;
+  text-transform: uppercase;
 }
 @media (max-width: 1024px) {
   .big-titre-habitats {
@@ -12622,4 +12623,66 @@ footer p.ligne {
 .move-left {
   width: 600px !important;
   left: 40% !important;
+}
+
+.big-titre-services {
+  position: relative;
+  background-color: black;
+  width: 100%;
+  height: 550px;
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .big-titre-services {
+    height: 380px;
+  }
+}
+@media (max-width: 768px) {
+  .big-titre-services {
+    height: 320px;
+  }
+}
+@media (max-width: 431px) {
+  .big-titre-services {
+    height: 170px;
+  }
+  .big-titre-services .big-titre-content h2, .big-titre-services .big-titre-content .h2 {
+    font-size: 0.85rem !important;
+  }
+}
+.big-titre-services::before {
+  position: absolute;
+  content: "";
+  background-image: url(../../Assets/Img-page-services/services-titre.webp);
+  background-position: 40px -71px;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  filter: opacity(0.7) drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+}
+@media (max-width: 768px) {
+  .big-titre-services::before {
+    background-position: 23px -18px;
+  }
+}
+.big-titre-services .big-titre-content h2, .big-titre-services .big-titre-content .h2 {
+  position: absolute;
+  top: 44%;
+  width: 45%;
+  font-size: 3.5rem !important;
+}
+@media (max-width: 1024px) {
+  .big-titre-services .big-titre-content h2, .big-titre-services .big-titre-content .h2 {
+    font-size: 2.5rem !important;
+  }
+}
+@media (max-width: 768px) {
+  .big-titre-services .big-titre-content h2, .big-titre-services .big-titre-content .h2 {
+    font-size: 2rem !important;
+  }
+}
+@media (max-width: 431px) {
+  .big-titre-services .big-titre-content h2, .big-titre-services .big-titre-content .h2 {
+    font-size: 1.2rem !important;
+  }
 }/*# sourceMappingURL=main.css.map */
