@@ -12461,6 +12461,11 @@ footer p.ligne {
   height: 100vh;
   overflow: hidden;
 }
+@media (max-width: 430px) {
+  .big-titre-specifique-habitat {
+    height: 70vh;
+  }
+}
 .big-titre-specifique-habitat .backgroung-img-habitats {
   position: absolute;
   -o-object-fit: cover;

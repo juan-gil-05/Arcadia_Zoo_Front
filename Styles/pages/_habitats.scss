@@ -6,6 +6,9 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    @media (max-width : 430px){
+        height: 70vh;
+    }
 
     //Style de l'image du fond
     .backgroung-img-habitats{
