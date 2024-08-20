@@ -52,3 +52,81 @@
             }
     }
 }
+
+//SECTION DES SERVICES
+.services{
+    padding-left: 0; 
+
+    .services-list{
+        list-style: none;
+        color: white;
+        margin-bottom: 2%; //pour séparer les listes des services
+
+        .service-container{ //pour centrer le contenu
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+            //animation
+            &:hover{
+                background-color: $info;
+                border-radius: 15px 100px 100px 15px;
+            }
+        }
+
+        picture{ //style du conteneur de l'image
+            width: 50%;
+            height: 250px;
+            margin-right : 4%;
+            @media (max-width : 1024px){ //laptop
+                height: 200px;
+            }
+            @media (max-width : 768px){ //tablet
+                height: 150px;
+            }
+            @media (max-width : 430px){ //mobile
+                height: 100px;
+            }
+        }
+
+        .service-img{ //style de l'image
+            width: 100%;
+            height: 100%;
+            border-radius: 5%;
+            object-fit: cover;
+            transition: 0.3s;
+            &:hover{
+                transform: scale(1.02);
+            }
+        }
+        .service-description{
+            width: 100%; //pour eviter que l'image se déborde
+        }
+
+        h2{ //style des noms des services
+            text-transform: uppercase;
+            color: white;
+            font-size: 1.8rem !important;
+            @media (max-width : 1024px){ //laptop
+                font-size: 1.5rem !important;
+            }
+            @media (max-width : 768px){ //tablet
+                font-size: 1.3rem !important;
+            }
+            @media (max-width : 430px){ //mobile
+                font-size: 0.9rem !important;
+            }
+        }
+
+        p{ //style des descriptions des services
+            margin-bottom: 0;
+            font-size: 1.1rem !important;
+            @media (max-width : 1024px){ //laptop
+                font-size: 0.8rem !important;
+            }
+            @media (max-width : 430px){ //mobile
+                font-size: 0.6rem !important;
+            }
+        }
+    }
+}

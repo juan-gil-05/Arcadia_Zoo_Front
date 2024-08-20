@@ -43,7 +43,7 @@
 }
 
 .text-shadow {
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .section-shadow {
@@ -62,6 +62,10 @@
 
 .text-justify {
   text-align: justify;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 @media (max-width: 431px) {
@@ -12684,5 +12688,92 @@ footer p.ligne {
 @media (max-width: 431px) {
   .big-titre-services .big-titre-content h2, .big-titre-services .big-titre-content .h2 {
     font-size: 1.2rem !important;
+  }
+}
+
+.services {
+  padding-left: 0;
+}
+.services .services-list {
+  list-style: none;
+  color: white;
+  margin-bottom: 2%;
+}
+.services .services-list .service-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.services .services-list .service-container:hover {
+  background-color: #7B5E2F;
+  border-radius: 15px 100px 100px 15px;
+}
+.services .services-list picture {
+  width: 50%;
+  height: 250px;
+  margin-right: 4%;
+}
+@media (max-width: 1024px) {
+  .services .services-list picture {
+    height: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .services .services-list picture {
+    height: 150px;
+  }
+}
+@media (max-width: 430px) {
+  .services .services-list picture {
+    height: 100px;
+  }
+}
+.services .services-list .service-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.3s;
+}
+.services .services-list .service-img:hover {
+  transform: scale(1.02);
+}
+.services .services-list .service-description {
+  width: 100%;
+}
+.services .services-list h2, .services .services-list .h2 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.8rem !important;
+}
+@media (max-width: 1024px) {
+  .services .services-list h2, .services .services-list .h2 {
+    font-size: 1.5rem !important;
+  }
+}
+@media (max-width: 768px) {
+  .services .services-list h2, .services .services-list .h2 {
+    font-size: 1.3rem !important;
+  }
+}
+@media (max-width: 430px) {
+  .services .services-list h2, .services .services-list .h2 {
+    font-size: 0.9rem !important;
+  }
+}
+.services .services-list p {
+  margin-bottom: 0;
+  font-size: 1.1rem !important;
+}
+@media (max-width: 1024px) {
+  .services .services-list p {
+    font-size: 0.8rem !important;
+  }
+}
+@media (max-width: 430px) {
+  .services .services-list p {
+    font-size: 0.6rem !important;
   }
 }/*# sourceMappingURL=main.css.map */

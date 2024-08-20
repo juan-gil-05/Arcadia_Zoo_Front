@@ -48,7 +48,7 @@ $btn-font-weight: 600; // épaisseur du text des boutons
     font-weight: 200;
 } 
 // ombre du text
-.text-shadow {text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);} 
+.text-shadow {text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);} 
 
 //ombre pour les sections
 .section-shadow{
@@ -70,6 +70,9 @@ $btn-font-weight: 600; // épaisseur du text des boutons
     text-align: justify;
 }
 
+a{ //style des liens
+    text-decoration: none !important; //pour enlever la line de dessous
+} 
 //Media queries pour le mobile
 @media (max-width: "431px"){
     // pour le text du titre
