@@ -1,0 +1,50 @@
+.modal-content{
+    background-color: $info;  //couleur du modal
+    overflow: hidden;
+    .btn-close{ // Style pour positioner le bouton de fermer le modal
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+        //changement de couler de l'image du bouton
+        --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+    }
+    .modal-body{ // Style du modal 
+        display: flex;
+        align-items: center;
+        ul{ //Style des list des propiétés de l'animal
+            list-style-type: none;
+            padding-left: 0;
+            color: white;
+            font-weight: 400 !important;
+            @media (max-width : 768px){
+                font-size: 0.9rem !important;
+            }
+            @media (max-width : 430px){ //mobile
+                font-size: 0.7rem !important;
+            }
+        }
+        picture{ // Style du conteneur de l'image de l'animal
+            width: 60%;
+            height: auto;
+            margin-right: 5%;
+            @media (max-width : 768px){ //tablet
+                width: 50%;
+            }
+            img{ //Style de l'image
+                width: 100%;
+                height: 100%;    
+                border-radius: 5%;     
+            }
+        }
+        h3{ //Style du prenom de l'animal
+            color: white;
+            text-transform: uppercase;
+            @media (max-width : 768px){ //tablet
+                font-size: 1.6rem !important;
+            }
+            @media (max-width : 430px){ //mobile
+                font-size: 1.2rem !important;
+            }
+        }
+    }
+}

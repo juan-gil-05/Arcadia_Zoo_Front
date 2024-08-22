@@ -12062,6 +12062,66 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.modal-content {
+  background-color: #7B5E2F;
+  overflow: hidden;
+}
+.modal-content .btn-close {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+}
+.modal-content .modal-body {
+  display: flex;
+  align-items: center;
+}
+.modal-content .modal-body ul {
+  list-style-type: none;
+  padding-left: 0;
+  color: white;
+  font-weight: 400 !important;
+}
+@media (max-width: 768px) {
+  .modal-content .modal-body ul {
+    font-size: 0.9rem !important;
+  }
+}
+@media (max-width: 430px) {
+  .modal-content .modal-body ul {
+    font-size: 0.7rem !important;
+  }
+}
+.modal-content .modal-body picture {
+  width: 60%;
+  height: auto;
+  margin-right: 5%;
+}
+@media (max-width: 768px) {
+  .modal-content .modal-body picture {
+    width: 50%;
+  }
+}
+.modal-content .modal-body picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+}
+.modal-content .modal-body h3, .modal-content .modal-body .h3 {
+  color: white;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .modal-content .modal-body h3, .modal-content .modal-body .h3 {
+    font-size: 1.6rem !important;
+  }
+}
+@media (max-width: 430px) {
+  .modal-content .modal-body h3, .modal-content .modal-body .h3 {
+    font-size: 1.2rem !important;
+  }
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -12560,7 +12620,7 @@ footer p.ligne {
   width: 100%;
   cursor: default;
 }
-.habitat-animals img {
+.habitat-animals .img-animals {
   width: 100%;
   height: 300px;
   border-radius: 50%;
@@ -12570,16 +12630,16 @@ footer p.ligne {
   transition: 0.3s ease;
 }
 @media (max-width: 1024px) {
-  .habitat-animals img {
+  .habitat-animals .img-animals {
     height: 200px;
   }
 }
 @media (max-width: 431px) {
-  .habitat-animals img {
+  .habitat-animals .img-animals {
     height: 120px;
   }
 }
-.habitat-animals img:hover {
+.habitat-animals .img-animals:hover {
   border-radius: 25%;
   transform: scale(1.1);
 }
@@ -12606,6 +12666,7 @@ footer p.ligne {
   position: absolute;
   color: white;
   font-size: 2rem;
+  text-transform: capitalize;
   bottom: 5%;
   left: 50%;
   transform: translate(-50%, -50%);

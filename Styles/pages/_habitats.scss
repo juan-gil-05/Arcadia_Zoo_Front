@@ -96,7 +96,7 @@
         cursor: default;
     }
     //style des images
-    img{
+    .img-animals{
         width: 100%;
         height: 300px;
         border-radius: 50%;
@@ -111,7 +111,7 @@
         }
     }
 
-    img:hover{
+    .img-animals:hover{
         border-radius: 25%;
         transform: scale(1.1);
     }
@@ -136,6 +136,7 @@
         position: absolute;
         color: white;
         font-size: 2rem;
+        text-transform: capitalize;
         bottom: 5%;
         left: 50%;
         transform: translate(-50%, -50%);  // pour centrer le text
