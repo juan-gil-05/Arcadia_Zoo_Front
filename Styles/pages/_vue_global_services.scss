@@ -1,0 +1,132 @@
+//SECTION DU BIG TITLE SUR LA PAGE DE TOUS LES SERVICES
+.big-titre-services{
+    // Taille du conteneur qui aura l'image
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 550px;
+    text-transform: uppercase;
+    // Media queries pour ajuster l'hauteur de l'image et le text
+    @media (max-width : 1024px){ // pour laptop, et tablet
+        height: 380px;
+    }
+    @media (max-width : 768px){ // Pour Tablet
+        height: 320px;
+    }
+    @media (max-width : 431px){ // Pour mobile
+        height: 170px;
+        .big-titre-content h2{
+            font-size: 0.85rem !important;
+        }
+    }
+    //Ajout de l'image
+    &::before{
+        position: absolute;
+        content: "";
+        background-image: url(../../Assets/Img-page-services/services-titre.webp); // je l'ai fait comme ca -> (../../), car le main.css est dans un autre dossier (css)
+        background-position: 40px -71px;
+        @media (max-width : 768px){ // Pour tablet
+            background-position: 23px -18px;
+        }
+        background-size: cover;
+        height: 100%; 
+        width: 100%;
+        filter: opacity(0.7)  drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+        //background-attachment: fixed;   //Pour créer l'effet parallax,  Pour le moment, je le laisse comment commentaire
+    }
+    //modification du text sur l'image
+    .big-titre-content h2{
+            position: absolute;
+            top: 44%;
+            width: 45%;
+            font-size: 3.5rem !important;
+
+            @media (max-width : 1024px){ // Pour laptop
+                font-size: 2.5rem !important;
+            }
+            @media (max-width : 768px){ // Pour Tablet
+                font-size: 2rem !important;
+            }
+            @media (max-width : 431px){ // Pour mobile
+                font-size: 1.2rem !important;
+            }
+    }
+}
+
+//SECTION DES SERVICES
+.services{
+    padding-left: 0; 
+
+    .services-list{
+        list-style: none;
+        color: white;
+        margin-bottom: 2%; //pour séparer les listes des services
+
+        .service-container{ //pour centrer le contenu
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+            //animation
+            &:hover{
+                background-color: $info;
+                border-radius: 15px 100px 100px 15px;
+            }
+        }
+
+        picture{ //style du conteneur de l'image
+            width: 50%;
+            height: 250px;
+            margin-right : 4%;
+            @media (max-width : 1024px){ //laptop
+                height: 200px;
+            }
+            @media (max-width : 768px){ //tablet
+                height: 150px;
+            }
+            @media (max-width : 430px){ //mobile
+                height: 100px;
+            }
+        }
+
+        .service-img{ //style de l'image
+            width: 100%;
+            height: 100%;
+            border-radius: 5%;
+            object-fit: cover;
+            transition: 0.3s;
+            &:hover{
+                transform: scale(1.02);
+            }
+        }
+        .service-description{
+            width: 100%; //pour eviter que l'image se déborde
+        }
+
+        h2{ //style des noms des services
+            text-transform: uppercase;
+            color: white;
+            font-size: 1.8rem !important;
+            @media (max-width : 1024px){ //laptop
+                font-size: 1.5rem !important;
+            }
+            @media (max-width : 768px){ //tablet
+                font-size: 1.3rem !important;
+            }
+            @media (max-width : 430px){ //mobile
+                font-size: 0.9rem !important;
+            }
+        }
+
+        p{ //style des descriptions des services
+            margin-bottom: 0;
+            font-size: 1.1rem !important;
+            @media (max-width : 1024px){ //laptop
+                font-size: 0.8rem !important;
+            }
+            @media (max-width : 430px){ //mobile
+                font-size: 0.6rem !important;
+            }
+        }
+    }
+}

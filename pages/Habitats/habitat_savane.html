@@ -1,17 +1,19 @@
 <!--Le titre prinipal-->
-<section class="big-titre-savane-habitat">
+<section class="big-titre-specifique-habitat">
+    <!--Image du fond-->
+    <img class="backgroung-img-habitats" src="../../Assets/Img-tous-habitats/Img-page-habitat-savane/savane.webp" alt="Image de la savane" loading="eager"> 
     <div class="big-titre-content">
-        <div class="container pt-3 savane-description">
+        <div class="container pt-3 description">
             <div class="row row-cols-lg-2">
                 <!--image-->
                 <div class="col container-img">
-                    <img class="img-big-titre" src="../../Assets/Img-page-habitat-savane/Autruche.jpg" alt="Image d'une autruche">
+                    <img class="img-big-titre" src="../../Assets/Img-tous-habitats/Img-page-habitat-savane/Autruche.webp" alt="Image d'une autruche" loading="eager">
                 </div>
                 <div class="col">
                     <!--Titre de l'habitat-->
                     <h2 class="subtitle-text text-shadow mt-2">savane</h2>
                     <!--description de l'habitat-->
-                    <p class="small-text text-justify">Plongez au cœur de la savane africaine au zoo ! Des girafes gracieuses aux troupeaux 
+                    <p class="small-text text-justify">Plongez au cœur de la savane africaine à Arcadia ! Des girafes gracieuses aux troupeaux 
                         d'antilopes bondissants, cet habitat vibrant vous transporte au milieu d'un paysage 
                         terreux et ensoleillé. Des éléphants se rassemblant près d'un point d'eau aux lions 
                         se prélassant sous le soleil, chaque coin réserve une rencontre fascinante avec la faune
@@ -24,52 +26,177 @@
     </div>
 </section>
 <!--Section avec les animaux de cet habitat-->
-<section class="pt-4 savane-animals">
+<section class="pt-4 habitat-animals">
     <div class="container">
         <h2 class="subtitle-text">animaux</h2> <!--Titre de la section des animaux de l'habitat-->
-        <div class="row row-cols-3 row-cols-lg-4 content-text">
-            <!--Tous les animaux de l'habitat-->
+        <div class="row row-cols-3 row-cols-lg-4 content-text"> <!--Tous les animaux de l'habitat-->     
             <!--lion-->
-            <div class="col">
-                <a href="">
-                    <img src="../../Assets/Img-page-habitat-savane/Lion.jpg" alt="Image d'un lion" class="lion-img">
-                </a>
-                <p>lion</p>
+            <div class="col" data-bs-toggle="modal" data-bs-target="#lionModal">   <!--avec les data pour le modal-->         
+                <img src="../../Assets/Img-tous-habitats/Img-page-habitat-savane/Lion.webp" alt="Image d'un lion" class="lion-img img-animals">
+                <p>lion</p>               
+                <!-- Modal -->
+                <div class="modal fade modal-xl" id="lionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"> <!--pour mettre le modal au centre de la page-->
+                    <div class="modal-content">
+                        <!--Bouton pour fermer le modal-->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body">
+                            <picture> <!--image de l'animal-->
+                                <img src="../../Assets/Img-tous-habitats/Img-page-habitat-savane/Lion.webp" alt="Image d'un lion">
+                            </picture>
+                            <div> <!--prenom et propiétés de l'animal-->
+                                <h3 class="subtitle-text">lion</h3> <!--prenom-->
+                                <!--propiétés-->
+                                <ul class="content-text">
+                                    <li><strong>Race : </strong>Mammifère</li>
+                                    <li><strong>Habitat : </strong>Savane</li>
+                                    <li><strong>État de l'animal : </strong>Excellent</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
             </div>
             <!--éléphant-->
-            <div class="col">
-                <a href="">
-                    <img src="../../Assets/Img-page-habitat-savane/éléphant.jpg" alt="Image d'un éléphant" class="elephant-img">
-                </a>
-                <p>éléphant</p>
+            <div class="col" data-bs-toggle="modal" data-bs-target="#elephantModal"> <!--avec les data pour le modal-->
+                    <img src="../../Assets/Img-tous-habitats/Img-page-habitat-savane/éléphant.webp" alt="Image d'un éléphant" class="elephant-img img-animals">
+                    <p>éléphant</p>
+                    <!-- Modal -->
+                    <div class="modal fade modal-xl" id="elephantModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered"> <!--pour mettre le modal au centre de la page-->
+                        <div class="modal-content">
+                            <!--Bouton pour fermer le modal-->
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <div class="modal-body">
+                                <picture> <!--image de l'animal-->
+                                    <img src="../../Assets/Img-tous-habitats/Img-page-habitat-savane/éléphant-modal.webp" alt="Image d'un éléphant">
+                                </picture>
+                                <div> <!--prenom et propiétés de l'animal-->
+                                    <h3 class="subtitle-text">éléphant</h3> <!--prenom-->
+                                    <!--propiétés-->
+                                    <ul class="content-text">
+                                        <li><strong>Race : </strong>Loxodonta africana</li>
+                                        <li><strong>Habitat : </strong>Savane</li>
+                                        <li><strong>État de l'animal : </strong>Excellent</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
             </div>
             <!--girafe-->
-            <div class="col">
-                <a href="">
-                    <img src="../../Assets/Img-page-habitat-savane/girafe.jpg" alt="Image d'une girafe">
-                </a>
-                <p>girafe</p>
+            <div class="col" data-bs-toggle="modal" data-bs-target="#girafeModal"> <!--avec les data pour le modal-->
+                    <img src="../../Assets/Img-tous-habitats/Img-page-habitat-savane/girafe.webp" alt="Image d'une girafe" class="img-animals"> 
+                    <p>girafe</p>
+                    <!-- Modal -->
+                <div class="modal fade modal-xl" id="girafeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"> <!--pour mettre le modal au centre de la page-->
+                    <div class="modal-content">
+                        <!--Bouton pour fermer le modal-->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body">
+                            <picture> <!--image de l'animal-->
+                                <img src="../../Assets/Img-tous-habitats/Img-page-habitat-savane/girafe-modal.webp" alt="Image d'une girafe">
+                            </picture>
+                            <div> <!--prenom et propiétés de l'animal-->
+                                <h3 class="subtitle-text">girafe</h3> <!--prenom-->
+                                <!--propiétés-->
+                                <ul class="content-text">
+                                    <li><strong>Race : </strong>Giraffa camelopardalis</li>
+                                    <li><strong>Habitat : </strong>Savane</li>
+                                    <li><strong>État de l'animal : </strong>Excellent</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>  
             </div>
             <!--zèbre-->
-            <div class="col">
-                <a href="">
-                    <img src="../../Assets/Img-page-habitat-savane/zèbre.jpg" alt="Image d'une zèbre">
-                </a>
-                <p>zèbre</p>
+            <div class="col" data-bs-toggle="modal" data-bs-target="#zebreModal"> <!--avec les data pour le modal-->
+                    <img src="../../Assets/Img-tous-habitats/Img-page-habitat-savane/zèbre.webp" alt="Image d'une zèbre" class="img-animals">
+                    <p>zèbre</p>
+                    <!-- Modal -->
+                <div class="modal fade modal-xl" id="zebreModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"> <!--pour mettre le modal au centre de la page-->
+                    <div class="modal-content">
+                        <!--Bouton pour fermer le modal-->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body">
+                            <picture> <!--image de l'animal-->
+                                <img src="../../Assets/Img-tous-habitats/Img-page-habitat-savane/zèbre-modal.webp" alt="Image d'un zèbre">
+                            </picture>
+                            <div> <!--prenom et propiétés de l'animal-->
+                                <h3 class="subtitle-text">zèbre</h3> <!--prenom-->
+                                <!--propiétés-->
+                                <ul class="content-text">
+                                    <li><strong>Race : </strong>Equus quagga</li>
+                                    <li><strong>Habitat : </strong>Savane</li>
+                                    <li><strong>État de l'animal : </strong>Excellent</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
             </div>
             <!--autruche-->
-            <div class="col">
-                <a href="">
-                    <img src="../../Assets/Img-page-habitat-savane/autruche-savane.jpg" alt="Image d'une autruche">
-                </a>
-                <p>autruche</p>
+            <div class="col" data-bs-toggle="modal" data-bs-target="#autrucheModal"> <!--avec les data pour le modal-->
+                    <img src="../../Assets/Img-tous-habitats/Img-page-habitat-savane/autruche-savane.webp" alt="Image d'une autruche" class="img-animals">
+                    <p>autruche</p>
+                    <!-- Modal -->
+                <div class="modal fade modal-xl" id="autrucheModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"> <!--pour mettre le modal au centre de la page-->
+                    <div class="modal-content">
+                        <!--Bouton pour fermer le modal-->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body">
+                            <picture> <!--image de l'animal-->
+                                <img src="../../Assets/Img-tous-habitats/Img-page-habitat-savane/Autruche.webp" alt="Image d'une autruche">
+                            </picture>
+                            <div> <!--prenom et propiétés de l'animal-->
+                                <h3 class="subtitle-text">autruche</h3> <!--prenom-->
+                                <!--propiétés-->
+                                <ul class="content-text">
+                                    <li><strong>Race : </strong>Struthio camelus</li>
+                                    <li><strong>Habitat : </strong>Savane</li>
+                                    <li><strong>État de l'animal : </strong>Excellent</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
             </div>
             <!--hippopotame-->
-            <div class="col">
-                <a href="">
-                    <img src="../../Assets/Img-page-habitat-savane/hippopotame.jpg" alt="Image d'un hippopotame" class="hippopotame-img">
-                </a>
-                <p>hippopotame</p>
+            <div class="col" data-bs-toggle="modal" data-bs-target="#hippopotameModal"> <!--avec les data pour le modal-->
+                    <img src="../../Assets/Img-tous-habitats/Img-page-habitat-savane/hippopotame.webp" alt="Image d'un hippopotame" class="hippopotame-img img-animals">
+                    <p>hippopotame</p>
+                    <!-- Modal -->
+                <div class="modal fade modal-xl" id="hippopotameModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"> <!--pour mettre le modal au centre de la page-->
+                    <div class="modal-content">
+                        <!--Bouton pour fermer le modal-->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body">
+                            <picture> <!--image de l'animal-->
+                                <img src="../../Assets/Img-tous-habitats/Img-page-habitat-savane/hippopotame.webp" alt="Image d'un hippopotame">
+                            </picture>
+                            <div> <!--prenom et propiétés de l'animal-->
+                                <h3 class="subtitle-text">hippopotame</h3> <!--prenom-->
+                                <!--propiétés-->
+                                <ul class="content-text">
+                                    <li><strong>Race : </strong>Hippopotamus amphibius</li>
+                                    <li><strong>Habitat : </strong>Savane</li>
+                                    <li><strong>État de l'animal : </strong>Excellent</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

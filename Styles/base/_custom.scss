@@ -1,0 +1,117 @@
+// customisation des couleurs et les fonts
+$primary : #1A440C;
+$secondary : #709255;
+$info : #7B5E2F;
+$dark : #001D00;
+$font-family-sans-serif : "Asap", sans-serif !default; // headline et subtitle text
+$font-family-serif : "Libre Franklin", serif; // content Text
+$btn-font-family: $font-family-serif; // font des boutons
+$btn-font-weight: 600; // épaisseur du text des boutons 
+
+
+//style du text des titres
+.title-text { 
+    font-family: $font-family-sans-serif;
+    font-size: 3rem !important;
+    font-weight: 800;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+
+    @media (max-width : 1024px){ //laptop
+        font-size: 2rem !important;
+    }
+}
+//style du text des sous-titres
+.subtitle-text{
+    font-family: $font-family-sans-serif;
+    font-size: 2.5rem !important;
+    font-weight: 600;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+
+    @media (max-width : 1024px){ //laptop
+        font-size: 1.9rem !important;
+    }
+}
+//style du text du contenu
+.content-text { 
+    font-family: $font-family-serif;
+    font-size: 1.5rem !important;
+    font-weight: 600;
+
+    @media (max-width : 1024px){ //laptop
+        font-size: 1.3rem !important;
+    }
+}
+//style du petit text 
+.small-text{
+    font-family: "signika", serif;
+    font-size: 1rem !important;
+    font-weight: 200;
+} 
+// ombre du text
+.text-shadow {text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);} 
+
+//ombre pour les sections
+.section-shadow{
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2); // je met une petite ombre dans toutes les section
+}
+//Style des liens
+.link{
+    color: $info;
+    text-decoration: none;
+}
+
+//Style des boutons
+.btn{
+    white-space: nowrap;
+    font-size: 0.9rem !important;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+a{ //style des liens
+    text-decoration: none !important; //pour enlever la line de dessous
+} 
+//Media queries pour le mobile
+@media (max-width: "431px"){
+    // pour le text du titre
+    .title-text{
+        font-size: 1.5rem !important;
+        font-weight: 600;
+    }
+    //pour le text du contenu 
+    .content-text{
+        font-size: 0.8rem !important;
+        font-weight: 500;
+    } 
+    // les sous-titres
+    .subtitle-text{
+        font-size: 1.3rem !important;
+    }
+    //le text petit
+    .small-text{
+        font-size: 0.62rem !important;
+        font-weight: 100;
+    }
+    //pour le footer en mobile
+    .footer-mobile{
+        padding-left: 30px;
+    }
+    // taille des boutons
+    .btn{
+        --bs-btn-font-size: 0.6rem !important; 
+    }
+}
+//Media Queries pour tablet
+@media (min-width : "768px") and (max-width : "1023px"){
+    // taille des bouton
+    .subtitle-text{
+        font-size: 1.7rem !important;
+    }
+}
+
+
+//----------------------------------------------------------------------------------------
+//Importation de bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";  // je l'ai mis ici pour qu'il prenne les changements des Styles 

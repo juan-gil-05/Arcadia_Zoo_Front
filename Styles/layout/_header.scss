@@ -1,0 +1,48 @@
+//j'ai fait ca pour que l'image du principal contenu sois visible
+.header{
+    position: relative;
+    z-index: 1;
+}
+// Mettre le navbar devant
+.navbar{
+    position: absolute;
+    width: 100%;
+}
+
+// Ajout une petite animation aux liens du navbar 
+.nav-link {
+    position: relative; /* Nécessaire pour le ::after */
+    padding: 5px 0 !important; // Changement du padding original bootstrap
+    margin-right: var(--bs-navbar-nav-link-padding-x);
+    margin-left: var(--bs-navbar-nav-link-padding-x);
+    line-height: 1; // Je colle la ligne au text
+    display: inline-block;
+    &::after{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 3px; /* l'épaisseur de la ligne */
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        transition: width 0.3s ease-in-out; /* ajout de la transition */
+    }
+    &:hover::after{
+        width: 100%; /* étendre la ligne */
+    }
+}
+
+// Corecction du logo avec le responsive
+.img-logo {
+    width: 50px;
+    transition: 0.6s;
+    //animation pour zoomer l'image
+    &:hover{
+        transform: scale(1.05);
+    }
+
+    @media(max-width: 576px){
+        width: 40px;  // pour les téléphones
+} 
+}

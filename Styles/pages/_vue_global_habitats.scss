@@ -1,0 +1,92 @@
+//SECTION DU BIG TITLE SUR LA PAGE DE TOUS LES HABITATS
+.big-titre-habitats{
+    // Taille du conteneur qui aura l'image
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 550px;
+    text-transform: uppercase;
+    // Media queries pour ajuster l'hauteur de l'image et le text
+    @media (max-width : 1024px){ // pour laptop, et tablet
+        height: 380px;
+    }
+    @media (max-width : 768px){ // Pour Tablet
+        height: 320px;
+    }
+    @media (max-width : 431px){ // Pour mobile
+        height: 170px;
+        .big-titre-content h2{
+            font-size: 0.85rem !important;
+        }
+    }
+    //Ajout de l'image
+    &::before{
+        position: absolute;
+        content: "";
+        background-image: url(../../Assets/Img-page-habitats/img_big-titre.webp); // je l'ai fait comme ca -> (../../), car le main.css est dans un autre dossier (css)
+        background-position: 11px -57px;
+        @media (max-width : 768px){ // Pour tablet
+            background-position: 0px -15px;
+        }
+        background-size: cover;
+        height: 100%; 
+        width: 100%;
+        filter: opacity(0.7)  drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+        //background-attachment: fixed;   //Pour créer l'effet parallax,  Pour le moment, je le laisse comment commentaire
+    }
+    //modification du text sur l'image
+    .big-titre-content h2{
+            position: absolute;
+            top: 44%;
+            width: 45%;
+            font-size: 3.5rem !important;
+
+            @media (max-width : 1024px){ // Pour laptop
+                font-size: 2.5rem !important;
+            }
+            @media (max-width : 768px){ // Pour Tablet
+                font-size: 2rem !important;
+            }
+            @media (max-width : 431px){ // Pour mobile
+                font-size: 1.2rem !important;
+            }
+    }
+}
+//SECTION DE TOUS LES HABITATS DU ZOO
+.img-container{
+    //Les habitats avec ces images
+    position: relative;
+    padding-top: 15px;
+    //animation pour zoomer l'image
+    transition: 0.4s;
+    &:hover{
+        transform: scale(1.03);
+    }
+    //images des habitats
+    .img-habitat{
+        cursor: pointer;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        filter: drop-shadow(2px 4px 5px rgb(30, 30, 30)); //ombre
+        border-radius: 5%;
+    }
+    //les noms des habitats
+    .name-habitat{
+        cursor: pointer;
+        position: absolute;
+        text-transform: uppercase;
+        bottom: 10%;
+        color: white;
+        padding: 5px 15% 5px 10px; // Pour que le text sois dans une "boite"
+        background-color: $info;
+        border-radius: 0 15px 15px 0;
+
+        @media (max-width : 768px){ // Pour tablet
+            font-size: 1rem !important;
+        }
+        @media (max-width : 431px){// Pour mobile
+            font-size: 0.8rem !important;
+        }
+    }
+}
