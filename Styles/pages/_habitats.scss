@@ -109,12 +109,12 @@
         @media (max-width : 431px){ //mobile
             height: 120px;
         }
+        &:hover{
+            border-radius: 25%;
+            transform: scale(1.1);
+        }
     }
 
-    .img-animals:hover{
-        border-radius: 25%;
-        transform: scale(1.1);
-    }
     //style des certaines images
     .elephant-img{
         object-position: top;
