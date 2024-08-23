@@ -234,8 +234,28 @@
         </div>
         <!--Le lien pour ecrire un avis et le bouton pour lire tous les avis-->
         <div class="link-btn-avis">
-            <a href="#" class="link content-text" >Laisser un commentaire</a>
+            <a href="#avis" class="link content-text" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="avis">Laisser un commentaire</a>
             <a href="#" class="btn btn-info">Lire plus</a>
+        </div>
+        <!--Section pour laisser l'avis-->
+        <div class="collapse mt-4" id="avis">
+            <div class="card card-body">
+                <!--Le pseudo-->
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="pseudo-input" placeholder="Giga-Panda">
+                    <label for="pseudo-input" class="small-text">Votre pseudo</label>
+                </div>
+                <!--L'avis-->
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Laisser votre avis ici" id="avis-textarea"></textarea>
+                    <label for="avis-textarea" class="small-text">Votre avis</label>
+                </div>   
+                <!--les boutton pour envoyer ou annuler l'avis-->
+                <div class="d-grid gap-2 d-flex justify-content-end mt-3">
+                    <button class="btn btn-danger me-md-2" type="reset">Annuler</button>
+                    <button class="btn btn-primary" type="submit" id="avis">Envoyer</button>
+                </div>
+            </div>
         </div>
     </div>
 </section>
