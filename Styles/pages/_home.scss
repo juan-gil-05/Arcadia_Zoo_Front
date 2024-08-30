@@ -183,3 +183,11 @@
         white-space: nowrap;
     }
 }
+#avis{ //Style de la section pour laisser un avis 
+    .card-body{
+        background-color: $secondary;
+    }
+    label{
+        color: black;
+    }
+}

@@ -3,6 +3,7 @@ $primary : #1A440C;
 $secondary : #709255;
 $info : #7B5E2F;
 $dark : #001D00;
+$danger : rgb(216 51 67 / 85%);
 $font-family-sans-serif : "Asap", sans-serif !default; // headline et subtitle text
 $font-family-serif : "Libre Franklin", serif; // content Text
 $btn-font-family: $font-family-serif; // font des boutons
@@ -64,6 +65,11 @@ $btn-font-weight: 600; // épaisseur du text des boutons
 .btn{
     white-space: nowrap;
     font-size: 0.9rem !important;
+
+    @media (max-width : 430px){ //mobile
+        font-size: 0.6rem !important;
+        padding: 4px !important;
+    }
 }
 
 .text-justify{
