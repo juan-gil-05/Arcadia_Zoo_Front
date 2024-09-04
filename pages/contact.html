@@ -1,0 +1,35 @@
+<!--Le titre prinipal-->
+<section class="big-titre-contact section-shadow">
+    <div class="big-titre-content">
+        <h2 class="subtitle-text text-white text-center text-shadow">contact</h2>
+    </div>
+</section>
+<!--Formulaire pour envoyer le message au zoo-->
+<section class="container contact-form mt-4">
+    <form action="" class="row g-3">
+        <!--Titre du message-->
+        <div class="col-md-6">
+            <label for="message-titre" class="form-label content-text">Titre</label>
+            <input type="text" class="form-control" id="message-titre" placeholder="Le sujet de votre message">
+        </div>
+        <!--Email du visiteur-->
+        <div class="col-md-6">
+            <label for="user-email" class="form-label content-text">Email</label>
+            <input type="email" class="form-control" id="user-email" placeholder="votre email">
+            <!--text de explication pour le visiteur-->
+            <div class="small-text">
+                <p>Mettez ici votre email pour pouvoir vous répondre</p>
+            </div>
+        </div>
+        <!--Message du visiteur-->
+        <div class="col-12">
+            <label for="user-message" class="form-label content-text">Votre message</label>
+            <textarea class="form-control" id="user-message"></textarea>
+        </div>
+        <!--Boutons pour envoyer ou annuler le message-->
+        <div class="text-center mt-3">
+            <button type="button" class="btn btn-danger">Annuler</button>
+            <button type="button" class="btn btn-primary">Envoyer</button>
+        </div>
+    </form>
+</section>

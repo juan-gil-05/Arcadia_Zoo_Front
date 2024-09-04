@@ -1,0 +1,70 @@
+//SECTION DU BIG TITLE SUR LA PAGE POUR SE CONNECTER
+.big-titre-contact{
+    // Taille du conteneur qui aura l'image
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 550px;
+    text-transform: uppercase;
+    // Media queries pour ajuster l'hauteur de l'image et le text
+    @media (max-width : 1024px){ // pour laptop, et tablet
+        height: 380px;
+    }
+    @media (max-width : 768px){ // Pour Tablet
+        height: 320px;
+    }
+    @media (max-width : 431px){ // Pour mobile
+        height: 170px;
+        .big-titre-content h2{
+            font-size: 0.85rem !important;
+        }
+    }
+    //Ajout de l'image
+    &::before{
+        position: absolute;
+        content: "";
+        background-image: url(../../Assets/Img-page-contact/contact-titre.webp); // je l'ai fait comme ca -> (../../), car le main.css est dans un autre dossier (css)
+        background-position: 0px -148px;
+        @media (max-width : 1024px){ //Pour laptop
+            background-position: 0px -92px;
+        }
+        @media (max-width : 768px){ // Pour tablet
+            background-position: 0px -60px;
+        }
+        @media (max-width : 430px){ // Pour mobile
+            background-position: 0px -37px;
+        }
+        background-size: cover;
+        height: 100%; 
+        width: 100%;
+        filter: opacity(0.7)  drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+        //background-attachment: fixed;   //Pour créer l'effet parallax,  Pour le moment, je le laisse comment commentaire
+    }
+    //modification du text sur l'image
+    .big-titre-content h2{
+            position: absolute;
+            top: 44%;
+            width: 45%;
+            font-size: 3.5rem !important;
+
+            @media (max-width : 1024px){ // Pour laptop
+                font-size: 2.5rem !important;
+            }
+            @media (max-width : 768px){ // Pour Tablet
+                font-size: 2rem !important;
+            }
+            @media (max-width : 431px){ // Pour mobile
+                font-size: 1.2rem !important;
+            }
+    }
+}
+//SECTION DU FORMULAIRE POUR SE CONTACTER AVEC LE ZOO
+.contact-form{
+    background-color: $info;
+    color: white;
+    padding: 20px 100px;
+    border-radius: 10px;
+    @media (max-width : 430px){ //Pour le mobile
+        padding: 5px 35px;
+    }
+}
