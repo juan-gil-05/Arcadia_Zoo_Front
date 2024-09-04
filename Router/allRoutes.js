@@ -14,6 +14,8 @@ export const allRoutes = [
     new Route("/habitats-aquarium", "Habitat Aquarium", "/pages/Habitats/habitat_aquarium.html"),
     //page services
     new Route("/services", "Nos Services", "/pages/vue_global_services.html"),
+    //pages des connexion
+    new Route("/singIn", "Se connecter", "/pages/Connexion/singIn.html"),
 ];
 
 //Le titre s'affiche comme ceci : Route.titre - websitename
